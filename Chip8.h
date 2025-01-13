@@ -1,12 +1,54 @@
+#include <cstdint>
 #ifndef CHIP8_H
 #define CHIP8_H
 
+const uint16_t MEMORY_SIZE = 4096;
+const uint8_t GP_REG = 16;
+const uint8_t PXL_WIDTH = 64;
+const uint8_t PXL_HEIGHT = 32;
+
+const uint16_t fontset[80] = {
+    0xF0, 0x90, 0x90, 0x90, 0xF0, // 0
+    0x20, 0x60, 0x20, 0x20, 0x70, // 1
+    0xF0, 0x10, 0xF0, 0x80, 0xF0, // 2
+    0xF0, 0x10, 0xF0, 0x10, 0xF0, // 3
+    0x90, 0x90, 0xF0, 0x10, 0x10, // 4
+    0xF0, 0x80, 0xF0, 0x10, 0xF0, // 5
+    0xF0, 0x80, 0xF0, 0x90, 0xF0, // 6
+    0xF0, 0x10, 0x20, 0x40, 0x40, // 7
+    0xF0, 0x90, 0xF0, 0x90, 0xF0, // 8
+    0xF0, 0x90, 0xF0, 0x10, 0xF0, // 9
+    0xF0, 0x90, 0xF0, 0x90, 0x90, // A
+    0xE0, 0x90, 0xE0, 0x90, 0xE0, // B
+    0xF0, 0x80, 0x80, 0x80, 0xF0, // C
+    0xE0, 0x90, 0x90, 0x90, 0xE0, // D
+    0xF0, 0x80, 0xF0, 0x80, 0xF0, // E
+    0xF0, 0x80, 0xF0, 0x80, 0x80  // F
+};
+
 class Chip8 {
     private:
-        int test;
+        //program counter, index register
+        uint16_t pc, I;
+        //sound timer, delay timer
+        uint8_t sound_t, delay_t;
+        //general purpose registers V0-VF
+        uint8_t V[GP_REG];
+        //stack pointer implementation
+        uint16_t sp;
+        //RAM
+        uint8_t memory[MEMORY_SIZE];
+        //screen representation
+        uint8_t gfx[PXL_HEIGHT * PXL_WIDTH];
+        //current opcode
+        uint16_t opCode;
     public:
-        Chip8(int initVal);
-        const void printMe();
+        Chip8();
+        void initialize();
+        void emulateCycle();
+        void loadGame(const char[]);
+        void Grant();
+        const void printMem(uint16_t, uint16_t);
 };
 
 #endif /*CHIP8_H*/
