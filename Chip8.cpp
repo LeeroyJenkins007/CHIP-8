@@ -27,19 +27,87 @@ void Chip8::emulateCycle(){
 
     // Fetch Opcode
     opCode = (memory[pc] << 8) | memory[pc+1];
-    std::cout << "OpCode: " << opCode << std::endl; 
+
+    //printf("OpCode: %04X\n", opCode);
     //increment to the next opcode since each opcode is 16 bits
     pc += 2;
-    uint8_t nib[4] = {(opCode & 0xF000)>>4, opCode & 0x0F00, (opCode & 0x00F0)>>4, opCode & 0x000F};
-    std::cout << "OpCode Nibs: " << std::hex << +nib[0] << ", " << +nib[1] << ", " << +nib[2] << ", " << +nib[3] << std::endl;
+    uint8_t nib[4] = {(uint8_t)((opCode & 0xF000)>>12), (uint8_t)((opCode & 0x0F00)>>8), (uint8_t)((opCode & 0x00F0)>>4), (uint8_t)(opCode & 0x000F)};
+    //std::cout << "OpCode Nibs: " << std::hex << +nib[0] << ", " << +nib[1] << ", " << +nib[2] << ", " << +nib[3] << std::endl;
 
     // Decode Opcode
-    switch(opCode){
-        case 0x10:
-            std::cout << "opcode 1\n";
+    switch(nib[0]){
+        case 0x0:
+            //std::cout << "opcode 0\n";
+            //std::cout << "back sequence: " << (nib[2]<<4 | nib[3]) << std::endl;
+            switch(nib[2]<<4 | nib[3]){
+                // cls
+                case 0xE0:
+                    std::cout << "CLS\n";
+                    return;
+                default:
+                    return;
+            }
+            return;
+        case 0x1:{
+            //std::cout << "opcode 1\n";
+            uint16_t jmpAddr = (nib[1]<<8 | nib[2]<<4 | nib[3]);
+            pc = jmpAddr;
+            std::cout << "JUMP to " << std::hex << jmpAddr << std::endl;
+            return;
+            }
+        case 0x2:
+            std::cout << "opcode 2\n";
+            return;
+        case 0x3:
+            std::cout << "opcode 3\n";
+            return;
+        case 0x4:
+            std::cout << "opcode 4\n";
+            return;
+        case 0x5:
+            std::cout << "opcode 5\n";
+            return;
+        case 0x6:
+            // mov VX, RR
+            //std::cout << "opcode 6\n";
+            gp_reg[nib[1]] = (nib[2]<<4 | nib[3]);
+            return;
+        case 0x7:
+            //add VX, RR
+            //std::cout << "opcode 7\n";
+            gp_reg[nib[1]] += (nib[2]<<4 | nib[3]);
+            return;
+        case 0x8:
+            std::cout << "opcode 8\n";
+            return;
+        case 0x9:
+            std::cout << "opcode 9\n";
+            return;
+        case 0xA:
+            // mvi NNN
+            //std::cout << "opcode A\n";
+            I = (nib[1]<<8|nib[2]<<4|nib[3]);
+            return;
+        case 0xB:
+            std::cout << "opcode B\n";
+            return;
+        case 0xC:
+            std::cout << "opcode C\n";
+            return;
+        case 0xD:{
+            //sprite vx,vy,n
+            //std::cout << "opcode D\n";
+            std::cout << "Print Sprite\n";
+            return;
+            }
+        case 0xE:
+            std::cout << "opcode E\n";
+            return;
+        case 0xF:
+            std::cout << "opcode F\n";
             return;
         default:
-            std::cout << "Default\n";
+            std::cout << "Not a valid opcode: " << std::hex << opCode << std::endl;
             return;
     }
     // Execute Opcode

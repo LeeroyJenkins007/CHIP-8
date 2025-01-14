@@ -3,7 +3,7 @@
 #define CHIP8_H
 
 const uint16_t MEMORY_SIZE = 4096;
-const uint8_t GP_REG = 16;
+const uint8_t GP_REG_SIZE = 16;
 const uint8_t PXL_WIDTH = 64;
 const uint8_t PXL_HEIGHT = 32;
 
@@ -33,7 +33,7 @@ class Chip8 {
         //sound timer, delay timer
         uint8_t sound_t, delay_t;
         //general purpose registers V0-VF
-        uint8_t V[GP_REG];
+        uint8_t gp_reg[GP_REG_SIZE];
         //stack pointer implementation
         uint16_t sp;
         //RAM
@@ -42,6 +42,7 @@ class Chip8 {
         uint8_t gfx[PXL_HEIGHT * PXL_WIDTH];
         //current opcode
         uint16_t opCode;
+        
     public:
         Chip8();
         void initialize();
@@ -49,6 +50,9 @@ class Chip8 {
         void loadGame(const char[]);
         void Grant();
         const void printMem(uint16_t, uint16_t);
+        
+        //indicator to draw
+        bool drawFlag;
 };
 
 #endif /*CHIP8_H*/

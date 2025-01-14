@@ -15,8 +15,14 @@ int main(){
 
     myChip8.loadGame(ROM);
     //myChip8.printMem(0x50, 650);
-    myChip8.emulateCycle();
 
+    for(int i = 0; i < 5; i++){
+        myChip8.emulateCycle();
+
+        if(myChip8.drawFlag){
+            //updateGraphics();
+        }
+    }
     //myChip8.Grant();
     return 0;
 }
