@@ -109,10 +109,10 @@ void Chip8::emulateCycle(){
         case 0xD:{
             //sprite vx,vy,n
             //std::cout << "opcode D\n";
-            std::cout << "Draw to Screen\n";
-            uint8_t X = gp_reg[nib[1]] % PXL_WIDTH;
+            std::cout << "Draw to Screen: \n";
+            uint8_t xcoord = gp_reg[nib[1]] % PXL_WIDTH;
             //uint8_t col = X;
-            uint8_t Y = gp_reg[nib[2]] % PXL_HEIGHT;
+            uint8_t ycoord = gp_reg[nib[2]] % PXL_HEIGHT;
             //uint8_t row = Y;
             //N = nib[3]
             /*
@@ -120,38 +120,35 @@ void Chip8::emulateCycle(){
                 gfx[i] = 1;
             }
             */
+           std::cout << "\t x: " << +xcoord << "\t xraw: " << +gp_reg[nib[1]] << " @ " << +nib[1] << "\n";
+           std::cout << "\t y: " << +ycoord << "\t yraw: " << +gp_reg[nib[2]] << " @ " << +nib[2] << "\n";
+           std::cout << "N: " << +nib[3] << "\n";
            gp_reg[0xF] = 0;
-           for(int row = 0; row < nib[3]; row++){
+           for(uint8_t row = 0; row < nib[3]; row++){
                 uint8_t sprite = memory[I + row];
                 
-                for(int col = 0; col < 8; col++){
-                    uint8_t pxLoc = X + Y*PXL_WIDTH;
+                for(uint8_t col = 0; col < 8; col++){
+                    uint8_t pxLoc = xcoord + col + ((ycoord + row )*PXL_WIDTH);
                     uint8_t pixel = gfx[pxLoc];
 
                     bool sprtOn = sprite & (0x1 << (7 - col));
                     if(sprtOn){
                         //pixel is 'on' AND sprite pixel is 'on'
                         if(pixel){
-                            gfx[pxLoc] = 0;
+                            //gfx[pxLoc] = 0;
                             gp_reg[0xF] = 1;
                         }else{
-                            gfx[pxLoc] = 1;
+                            gfx[pxLoc] ^= 1;
                         }
 
                     }
 
-                    if(X != PXL_WIDTH-1){ 
-                        X++;
-                    }else{
+                    if(xcoord + col == PXL_WIDTH-1)
                         break;
-                    }
 
                 } //for columns
-                if(Y != PXL_HEIGHT-1){
-                    Y++;
-                }else{
+                if(ycoord + row == PXL_HEIGHT-1)
                     break;
-                }
            } //for rows
 
             drawFlag = true;

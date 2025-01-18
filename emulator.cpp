@@ -10,8 +10,8 @@ using namespace std;
 
 Chip8 myChip8;
 
-//const char ROM[] = "../roms/IBM Logo.ch8";
-const char ROM[] = "../roms/chip8-logo.ch8";
+const char ROM[] = "../roms/2-ibm-logo.ch8";
+//const char ROM[] = "../roms/chip8-logo.ch8";
 
 int main(){
 
@@ -29,7 +29,7 @@ int main(){
 
     // sizing using 'logical sizes' so it's not actual pixle size
     //window = SDL_CreateWindow("CHIP-8", PXL_WIDTH * 20, PXL_HEIGHT * 20, SDL_WINDOW_RESIZABLE);
-    window = SDL_CreateWindow("CHIP-8 Emulator", 1024, 512, SDL_WINDOW_RESIZABLE);
+    window = SDL_CreateWindow("CHIP-8 Emulator", PXL_WIDTH * 10, PXL_HEIGHT * 10, SDL_WINDOW_RESIZABLE);
     if(!window){
         SDL_LogCritical(SDL_LOG_CATEGORY_VIDEO, SDL_GetError());
     }else{
@@ -43,7 +43,8 @@ int main(){
         cout << "Renderer Created\n";
     }
 
-    SDL_RendererLogicalPresentation(SDL_LOGICAL_PRESENTATION_DISABLED);
+    //SDL_SetRenderLogicalPresentation(renderer, PXL_WIDTH, PXL_HEIGHT, SDL_LOGICAL_PRESENTATION_INTEGER_SCALE);
+    //SDL_RendererLogicalPresentation(SDL_LOGICAL_PRESENTATION_DISABLED);
 
     /*
     //char buffer[1024];
@@ -61,7 +62,7 @@ int main(){
     */
 
     //create texture
-    screenTexture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_ARGB32, SDL_TEXTUREACCESS_STREAMING, PXL_WIDTH, PXL_HEIGHT);
+    screenTexture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING, PXL_WIDTH, PXL_HEIGHT);
 
 
     myChip8.initialize();
