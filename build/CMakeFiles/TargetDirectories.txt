@@ -1,0 +1,8 @@
+D:/Workspace/C++/repos/CHIP-8/build/CMakeFiles/Chip8.dir
+D:/Workspace/C++/repos/CHIP-8/build/CMakeFiles/edit_cache.dir
+D:/Workspace/C++/repos/CHIP-8/build/CMakeFiles/rebuild_cache.dir
+D:/Workspace/C++/repos/CHIP-8/build/thirdparty/SDL/CMakeFiles/SDL3-shared.dir
+D:/Workspace/C++/repos/CHIP-8/build/thirdparty/SDL/CMakeFiles/SDL3_test.dir
+D:/Workspace/C++/repos/CHIP-8/build/thirdparty/SDL/CMakeFiles/SDL_uclibc.dir
+D:/Workspace/C++/repos/CHIP-8/build/thirdparty/SDL/CMakeFiles/edit_cache.dir
+D:/Workspace/C++/repos/CHIP-8/build/thirdparty/SDL/CMakeFiles/rebuild_cache.dir
