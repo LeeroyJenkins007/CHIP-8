@@ -3,7 +3,7 @@
 #define CHIP8_H
 
 const uint16_t MEMORY_SIZE = 4096;
-const uint8_t GP_REG = 16;
+const uint8_t GP_REG_SIZE = 16;
 const uint8_t PXL_WIDTH = 64;
 const uint8_t PXL_HEIGHT = 32;
 
@@ -27,19 +27,17 @@ const uint16_t fontset[80] = {
 };
 
 class Chip8 {
-    private:
+     private:
         //program counter, index register
         uint16_t pc, I;
         //sound timer, delay timer
         uint8_t sound_t, delay_t;
         //general purpose registers V0-VF
-        uint8_t V[GP_REG];
+        uint8_t gp_reg[GP_REG_SIZE];
         //stack pointer implementation
         uint16_t sp;
         //RAM
         uint8_t memory[MEMORY_SIZE];
-        //screen representation
-        uint8_t gfx[PXL_HEIGHT * PXL_WIDTH];
         //current opcode
         uint16_t opCode;
     public:
@@ -47,8 +45,14 @@ class Chip8 {
         void initialize();
         void emulateCycle();
         void loadGame(const char[]);
+        void clearScreen();
         void Grant();
         const void printMem(uint16_t, uint16_t);
+
+        //screen representation
+        uint8_t gfx[PXL_HEIGHT * PXL_WIDTH];
+        //flag if pixels were changed
+        bool drawFlag;
 };
 
 #endif /*CHIP8_H*/

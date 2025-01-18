@@ -134,15 +134,28 @@ CMakeFiles/Chip8.dir/emulator.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.1.0/bits/ostream.tcc \
  C:/msys64/ucrt64/include/c++/13.1.0/istream \
  C:/msys64/ucrt64/include/c++/13.1.0/bits/istream.tcc \
+ C:/msys64/ucrt64/include/direct.h C:/msys64/ucrt64/include/io.h \
+ C:/msys64/ucrt64/include/string.h \
+ C:/msys64/ucrt64/include/sec_api/string_s.h \
+ C:/msys64/ucrt64/include/c++/13.1.0/chrono \
+ C:/msys64/ucrt64/include/c++/13.1.0/bits/chrono.h \
+ C:/msys64/ucrt64/include/c++/13.1.0/ratio \
+ C:/msys64/ucrt64/include/c++/13.1.0/cstdint \
+ C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h \
+ C:/msys64/ucrt64/include/stdint.h \
+ C:/msys64/ucrt64/include/c++/13.1.0/limits \
+ C:/msys64/ucrt64/include/c++/13.1.0/ctime \
+ C:/msys64/ucrt64/include/c++/13.1.0/bits/parse_numbers.h \
+ C:/msys64/ucrt64/include/c++/13.1.0/thread \
+ C:/msys64/ucrt64/include/c++/13.1.0/bits/std_thread.h \
+ C:/msys64/ucrt64/include/c++/13.1.0/bits/unique_ptr.h \
+ C:/msys64/ucrt64/include/c++/13.1.0/bits/this_thread_sleep.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_stdinc.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_platform_defines.h \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdarg.h \
  C:/msys64/ucrt64/include/stdarg.h \
  C:/msys64/ucrt64/include/_mingw_stdarg.h \
- C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h \
- C:/msys64/ucrt64/include/stdint.h C:/msys64/ucrt64/include/string.h \
- C:/msys64/ucrt64/include/sec_api/string_s.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_begin_code.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_close_code.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_assert.h \
@@ -199,5 +212,4 @@ CMakeFiles/Chip8.dir/emulator.cpp.obj: \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_tray.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_version.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_oldnames.h \
- D:\Workspace\C++\repos\CHIP-8\Chip8.h \
- C:/msys64/ucrt64/include/c++/13.1.0/cstdint
+ D:\Workspace\C++\repos\CHIP-8\Chip8.h

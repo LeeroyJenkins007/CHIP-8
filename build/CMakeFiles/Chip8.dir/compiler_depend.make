@@ -172,6 +172,7 @@ CMakeFiles/Chip8.dir/emulator.cpp.obj: D:/Workspace/C++/repos/CHIP-8/emulator.cp
   C:/msys64/ucrt64/include/c++/13.1.0/bits/basic_string.tcc \
   C:/msys64/ucrt64/include/c++/13.1.0/bits/char_traits.h \
   C:/msys64/ucrt64/include/c++/13.1.0/bits/charconv.h \
+  C:/msys64/ucrt64/include/c++/13.1.0/bits/chrono.h \
   C:/msys64/ucrt64/include/c++/13.1.0/bits/concept_check.h \
   C:/msys64/ucrt64/include/c++/13.1.0/bits/cpp_type_traits.h \
   C:/msys64/ucrt64/include/c++/13.1.0/bits/cxxabi_forced.h \
@@ -197,6 +198,7 @@ CMakeFiles/Chip8.dir/emulator.cpp.obj: D:/Workspace/C++/repos/CHIP-8/emulator.cp
   C:/msys64/ucrt64/include/c++/13.1.0/bits/new_allocator.h \
   C:/msys64/ucrt64/include/c++/13.1.0/bits/ostream.tcc \
   C:/msys64/ucrt64/include/c++/13.1.0/bits/ostream_insert.h \
+  C:/msys64/ucrt64/include/c++/13.1.0/bits/parse_numbers.h \
   C:/msys64/ucrt64/include/c++/13.1.0/bits/postypes.h \
   C:/msys64/ucrt64/include/c++/13.1.0/bits/predefined_ops.h \
   C:/msys64/ucrt64/include/c++/13.1.0/bits/ptr_traits.h \
@@ -204,6 +206,7 @@ CMakeFiles/Chip8.dir/emulator.cpp.obj: D:/Workspace/C++/repos/CHIP-8/emulator.cp
   C:/msys64/ucrt64/include/c++/13.1.0/bits/refwrap.h \
   C:/msys64/ucrt64/include/c++/13.1.0/bits/requires_hosted.h \
   C:/msys64/ucrt64/include/c++/13.1.0/bits/std_abs.h \
+  C:/msys64/ucrt64/include/c++/13.1.0/bits/std_thread.h \
   C:/msys64/ucrt64/include/c++/13.1.0/bits/stl_algobase.h \
   C:/msys64/ucrt64/include/c++/13.1.0/bits/stl_construct.h \
   C:/msys64/ucrt64/include/c++/13.1.0/bits/stl_function.h \
@@ -215,16 +218,20 @@ CMakeFiles/Chip8.dir/emulator.cpp.obj: D:/Workspace/C++/repos/CHIP-8/emulator.cp
   C:/msys64/ucrt64/include/c++/13.1.0/bits/streambuf_iterator.h \
   C:/msys64/ucrt64/include/c++/13.1.0/bits/string_view.tcc \
   C:/msys64/ucrt64/include/c++/13.1.0/bits/stringfwd.h \
+  C:/msys64/ucrt64/include/c++/13.1.0/bits/this_thread_sleep.h \
+  C:/msys64/ucrt64/include/c++/13.1.0/bits/unique_ptr.h \
   C:/msys64/ucrt64/include/c++/13.1.0/bits/uses_allocator.h \
   C:/msys64/ucrt64/include/c++/13.1.0/bits/uses_allocator_args.h \
   C:/msys64/ucrt64/include/c++/13.1.0/bits/utility.h \
   C:/msys64/ucrt64/include/c++/13.1.0/cctype \
   C:/msys64/ucrt64/include/c++/13.1.0/cerrno \
+  C:/msys64/ucrt64/include/c++/13.1.0/chrono \
   C:/msys64/ucrt64/include/c++/13.1.0/clocale \
   C:/msys64/ucrt64/include/c++/13.1.0/cstddef \
   C:/msys64/ucrt64/include/c++/13.1.0/cstdint \
   C:/msys64/ucrt64/include/c++/13.1.0/cstdio \
   C:/msys64/ucrt64/include/c++/13.1.0/cstdlib \
+  C:/msys64/ucrt64/include/c++/13.1.0/ctime \
   C:/msys64/ucrt64/include/c++/13.1.0/cwchar \
   C:/msys64/ucrt64/include/c++/13.1.0/cwctype \
   C:/msys64/ucrt64/include/c++/13.1.0/debug/assertions.h \
@@ -240,15 +247,18 @@ CMakeFiles/Chip8.dir/emulator.cpp.obj: D:/Workspace/C++/repos/CHIP-8/emulator.cp
   C:/msys64/ucrt64/include/c++/13.1.0/iosfwd \
   C:/msys64/ucrt64/include/c++/13.1.0/iostream \
   C:/msys64/ucrt64/include/c++/13.1.0/istream \
+  C:/msys64/ucrt64/include/c++/13.1.0/limits \
   C:/msys64/ucrt64/include/c++/13.1.0/new \
   C:/msys64/ucrt64/include/c++/13.1.0/ostream \
   C:/msys64/ucrt64/include/c++/13.1.0/pstl/pstl_config.h \
+  C:/msys64/ucrt64/include/c++/13.1.0/ratio \
   C:/msys64/ucrt64/include/c++/13.1.0/stdexcept \
   C:/msys64/ucrt64/include/c++/13.1.0/stdlib.h \
   C:/msys64/ucrt64/include/c++/13.1.0/streambuf \
   C:/msys64/ucrt64/include/c++/13.1.0/string \
   C:/msys64/ucrt64/include/c++/13.1.0/string_view \
   C:/msys64/ucrt64/include/c++/13.1.0/system_error \
+  C:/msys64/ucrt64/include/c++/13.1.0/thread \
   C:/msys64/ucrt64/include/c++/13.1.0/tuple \
   C:/msys64/ucrt64/include/c++/13.1.0/type_traits \
   C:/msys64/ucrt64/include/c++/13.1.0/typeinfo \
@@ -269,7 +279,9 @@ CMakeFiles/Chip8.dir/emulator.cpp.obj: D:/Workspace/C++/repos/CHIP-8/emulator.cp
   C:/msys64/ucrt64/include/corecrt_wstdlib.h \
   C:/msys64/ucrt64/include/crtdefs.h \
   C:/msys64/ucrt64/include/ctype.h \
+  C:/msys64/ucrt64/include/direct.h \
   C:/msys64/ucrt64/include/errno.h \
+  C:/msys64/ucrt64/include/io.h \
   C:/msys64/ucrt64/include/limits.h \
   C:/msys64/ucrt64/include/locale.h \
   C:/msys64/ucrt64/include/malloc.h \
@@ -393,6 +405,8 @@ C:/msys64/ucrt64/include/_mingw_off_t.h:
 
 C:/msys64/ucrt64/include/_mingw_stat64.h:
 
+C:/msys64/ucrt64/include/c++/13.1.0/ratio:
+
 C:/msys64/ucrt64/include/sec_api/stdlib_s.h:
 
 C:/msys64/ucrt64/include/c++/13.1.0/bit:
@@ -414,6 +428,8 @@ C:/msys64/ucrt64/include/c++/13.1.0/ext/alloc_traits.h:
 C:/msys64/ucrt64/include/c++/13.1.0/bits/ptr_traits.h:
 
 D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL.h:
+
+C:/msys64/ucrt64/include/c++/13.1.0/bits/unique_ptr.h:
 
 C:/msys64/ucrt64/include/c++/13.1.0/bits/basic_ios.h:
 
@@ -708,6 +724,26 @@ D:/Workspace/C++/repos/CHIP-8/Chip8.h:
 D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_log.h:
 
 D:/Workspace/C++/repos/CHIP-8/emulator.cpp:
+
+C:/msys64/ucrt64/include/c++/13.1.0/bits/chrono.h:
+
+C:/msys64/ucrt64/include/c++/13.1.0/bits/parse_numbers.h:
+
+C:/msys64/ucrt64/include/c++/13.1.0/bits/std_thread.h:
+
+C:/msys64/ucrt64/include/c++/13.1.0/bits/this_thread_sleep.h:
+
+C:/msys64/ucrt64/include/c++/13.1.0/chrono:
+
+C:/msys64/ucrt64/include/c++/13.1.0/ctime:
+
+C:/msys64/ucrt64/include/c++/13.1.0/limits:
+
+C:/msys64/ucrt64/include/c++/13.1.0/thread:
+
+C:/msys64/ucrt64/include/direct.h:
+
+C:/msys64/ucrt64/include/io.h:
 
 C:/msys64/ucrt64/include/sec_api/string_s.h:
 

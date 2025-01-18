@@ -11,13 +11,22 @@ Chip8::Chip8(){
 void Chip8::initialize(){
     pc = 0x200;
     sp = 0;
-    I = 0x200;
+    I = 0;
 
     //load font set into memory 0x50 - 0x9F
     for(uint8_t idx = 0; idx < 80; idx++){
         memory[idx+0x50] = fontset[idx];
     }
+
 }
+
+void Chip8::clearScreen(){
+    for(int i = 0; i < PXL_HEIGHT * PXL_WIDTH; i++){
+        gfx[i] = 0;
+    }
+
+}
+
 
 void Chip8::Grant(){
     std::cout << "Something Nice said by grant" << std::endl;
@@ -27,19 +36,135 @@ void Chip8::emulateCycle(){
 
     // Fetch Opcode
     opCode = (memory[pc] << 8) | memory[pc+1];
-    std::cout << "OpCode: " << opCode << std::endl; 
+    //std::cout << "OpCode: " << opCode << std::endl; 
     //increment to the next opcode since each opcode is 16 bits
+    std::cout << std::hex << "0x" << pc << "\t 0x" << opCode << "\n";
     pc += 2;
-    uint8_t nib[4] = {(opCode & 0xF000)>>4, opCode & 0x0F00, (opCode & 0x00F0)>>4, opCode & 0x000F};
-    std::cout << "OpCode Nibs: " << std::hex << +nib[0] << ", " << +nib[1] << ", " << +nib[2] << ", " << +nib[3] << std::endl;
+    //should put this into a struct
+    uint8_t nib[4] = {(uint8_t)((opCode & 0xF000)>>12), (uint8_t)((opCode & 0x0F00)>>8), (uint8_t)((opCode & 0x00F0)>>4), (uint8_t)(opCode & 0x000F)};
+    //std::cout << "OpCode Nibs: " << std::hex << +nib[0] << ", " << +nib[1] << ", " << +nib[2] << ", " << +nib[3] << std::endl;
 
     // Decode Opcode
-    switch(opCode){
-        case 0x10:
-            std::cout << "opcode 1\n";
+    switch(nib[0]){
+        case 0x0:
+            //std::cout << "opcode 0\n";
+            //std::cout << "back sequence: " << (nib[2]<<4 | nib[3]) << std::endl;
+            switch(nib[2]<<4 | nib[3]){
+                // cls
+                case 0xE0:
+                    std::cout << "CLS\n";
+                    clearScreen();
+                    drawFlag = true;
+                    return;
+                default:
+                    return;
+            }
+            return;
+        case 0x1:{
+            //std::cout << "opcode 1\n";
+            uint16_t jmpAddr = (nib[1]<<8 | nib[2]<<4 | nib[3]);
+            pc = jmpAddr;
+            std::cout << "JUMP to " << std::hex << jmpAddr << std::endl;
+            return;
+            }
+        case 0x2:
+            std::cout << "opcode 2\n";
+            return;
+        case 0x3:
+            std::cout << "opcode 3\n";
+            return;
+        case 0x4:
+            std::cout << "opcode 4\n";
+            return;
+        case 0x5:
+            std::cout << "opcode 5\n";
+            return;
+        case 0x6:
+            // mov VX, RR
+            //std::cout << "opcode 6\n";
+            gp_reg[nib[1]] = (nib[2]<<4 | nib[3]);
+            return;
+        case 0x7:
+            //add VX, RR
+            //std::cout << "opcode 7\n";
+            gp_reg[nib[1]] += (nib[2]<<4 | nib[3]);
+            return;
+        case 0x8:
+            std::cout << "opcode 8\n";
+            return;
+        case 0x9:
+            std::cout << "opcode 9\n";
+            return;
+        case 0xA:
+            // mvi NNN
+            //std::cout << "opcode A\n";
+            I = (nib[1]<<8|nib[2]<<4|nib[3]);
+            return;
+        case 0xB:
+            std::cout << "opcode B\n";
+            return;
+        case 0xC:
+            std::cout << "opcode C\n";
+            return;
+        case 0xD:{
+            //sprite vx,vy,n
+            //std::cout << "opcode D\n";
+            std::cout << "Draw to Screen\n";
+            uint8_t X = gp_reg[nib[1]] % PXL_WIDTH;
+            //uint8_t col = X;
+            uint8_t Y = gp_reg[nib[2]] % PXL_HEIGHT;
+            //uint8_t row = Y;
+            //N = nib[3]
+            /*
+            for(int i = 0; i < PXL_HEIGHT * PXL_WIDTH; i++){
+                gfx[i] = 1;
+            }
+            */
+           gp_reg[0xF] = 0;
+           for(int row = 0; row < nib[3]; row++){
+                uint8_t sprite = memory[I + row];
+                
+                for(int col = 0; col < 8; col++){
+                    uint8_t pxLoc = X + Y*PXL_WIDTH;
+                    uint8_t pixel = gfx[pxLoc];
+
+                    bool sprtOn = sprite & (0x1 << (7 - col));
+                    if(sprtOn){
+                        //pixel is 'on' AND sprite pixel is 'on'
+                        if(pixel){
+                            gfx[pxLoc] = 0;
+                            gp_reg[0xF] = 1;
+                        }else{
+                            gfx[pxLoc] = 1;
+                        }
+
+                    }
+
+                    if(X != PXL_WIDTH-1){ 
+                        X++;
+                    }else{
+                        break;
+                    }
+
+                } //for columns
+                if(Y != PXL_HEIGHT-1){
+                    Y++;
+                }else{
+                    break;
+                }
+           } //for rows
+
+            drawFlag = true;
+            return;
+            }
+        case 0xE:
+            std::cout << "opcode E\n";
+            return;
+        case 0xF:
+            std::cout << "opcode F\n";
             return;
         default:
-            std::cout << "Default\n";
+            std::cout << "Not a valid opcode: " << std::hex << opCode << std::endl;
             return;
     }
     // Execute Opcode
