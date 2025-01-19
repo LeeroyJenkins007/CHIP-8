@@ -72,7 +72,7 @@ int main(){
     //myChip8.printMem(0x50, 650);
     
 
-
+    //string input;
     bool isRunning = true;
     while(isRunning){
         SDL_Event event;
@@ -100,6 +100,7 @@ int main(){
             SDL_RenderTexture(renderer, screenTexture, NULL, NULL);
             SDL_RenderPresent(renderer);
         }
+        //cin >> input;
         //slow down the cycles
         this_thread::sleep_for(chrono::milliseconds(100));
     }

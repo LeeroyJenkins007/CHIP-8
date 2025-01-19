@@ -38,7 +38,7 @@ void Chip8::emulateCycle(){
     opCode = (memory[pc] << 8) | memory[pc+1];
     //std::cout << "OpCode: " << opCode << std::endl; 
     //increment to the next opcode since each opcode is 16 bits
-    std::cout << std::hex << "0x" << pc << "\t 0x" << opCode << "\n";
+    //std::cout << std::hex << "0x" << pc << "\t 0x" << opCode << "\n";
     pc += 2;
     //should put this into a struct
     uint8_t nib[4] = {(uint8_t)((opCode & 0xF000)>>12), (uint8_t)((opCode & 0x0F00)>>8), (uint8_t)((opCode & 0x00F0)>>4), (uint8_t)(opCode & 0x000F)};
@@ -52,7 +52,7 @@ void Chip8::emulateCycle(){
             switch(nib[2]<<4 | nib[3]){
                 // cls
                 case 0xE0:
-                    std::cout << "CLS\n";
+                    //std::cout << "CLS\n";
                     clearScreen();
                     drawFlag = true;
                     return;
@@ -64,7 +64,7 @@ void Chip8::emulateCycle(){
             //std::cout << "opcode 1\n";
             uint16_t jmpAddr = (nib[1]<<8 | nib[2]<<4 | nib[3]);
             pc = jmpAddr;
-            std::cout << "JUMP to " << std::hex << jmpAddr << std::endl;
+            //std::cout << "JUMP to " << std::hex << jmpAddr << std::endl;
             return;
             }
         case 0x2:
@@ -99,6 +99,7 @@ void Chip8::emulateCycle(){
             // mvi NNN
             //std::cout << "opcode A\n";
             I = (nib[1]<<8|nib[2]<<4|nib[3]);
+            //std::cout << "New I: " << std::hex << I << "\n";
             return;
         case 0xB:
             std::cout << "opcode B\n";
@@ -109,7 +110,7 @@ void Chip8::emulateCycle(){
         case 0xD:{
             //sprite vx,vy,n
             //std::cout << "opcode D\n";
-            std::cout << "Draw to Screen: \n";
+            //std::cout << "Draw to Screen: \n";
             uint8_t xcoord = gp_reg[nib[1]] % PXL_WIDTH;
             //uint8_t col = X;
             uint8_t ycoord = gp_reg[nib[2]] % PXL_HEIGHT;
@@ -120,19 +121,25 @@ void Chip8::emulateCycle(){
                 gfx[i] = 1;
             }
             */
-           std::cout << "\t x: " << +xcoord << "\t xraw: " << +gp_reg[nib[1]] << " @ " << +nib[1] << "\n";
-           std::cout << "\t y: " << +ycoord << "\t yraw: " << +gp_reg[nib[2]] << " @ " << +nib[2] << "\n";
-           std::cout << "N: " << +nib[3] << "\n";
+           //std::cout << "\t x: " << +xcoord << "\t xraw: " << +gp_reg[nib[1]] << " @ " << +nib[1] << "\n";
+           //std::cout << "\t y: " << +ycoord << "\t yraw: " << +gp_reg[nib[2]] << " @ " << +nib[2] << "\n";
+           //std::cout << "N: " << +nib[3] << "\n";
            gp_reg[0xF] = 0;
            for(uint8_t row = 0; row < nib[3]; row++){
                 uint8_t sprite = memory[I + row];
+                //std::cout << "Row: " << +row << "\n";
                 
                 for(uint8_t col = 0; col < 8; col++){
-                    uint8_t pxLoc = xcoord + col + ((ycoord + row )*PXL_WIDTH);
+                    uint16_t pxLoc = xcoord + col + ((ycoord + row )*PXL_WIDTH);
+                    //std::cout << "Col: " << +col << "\n";
+                    //std::cout << +pxLoc << "\n";
                     uint8_t pixel = gfx[pxLoc];
 
-                    bool sprtOn = sprite & (0x1 << (7 - col));
-                    if(sprtOn){
+                    
+
+                    //bool sprtOn = sprite & (0x1 << (7 - col));
+                    //if the sprite pixel is 'on'
+                    if(sprite & (0x1 << (7 - col))){
                         //pixel is 'on' AND sprite pixel is 'on'
                         if(pixel){
                             //gfx[pxLoc] = 0;
