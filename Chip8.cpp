@@ -112,15 +112,8 @@ void Chip8::emulateCycle(){
             //std::cout << "opcode D\n";
             //std::cout << "Draw to Screen: \n";
             uint8_t xcoord = gp_reg[nib[1]] % PXL_WIDTH;
-            //uint8_t col = X;
             uint8_t ycoord = gp_reg[nib[2]] % PXL_HEIGHT;
-            //uint8_t row = Y;
-            //N = nib[3]
-            /*
-            for(int i = 0; i < PXL_HEIGHT * PXL_WIDTH; i++){
-                gfx[i] = 1;
-            }
-            */
+
            //std::cout << "\t x: " << +xcoord << "\t xraw: " << +gp_reg[nib[1]] << " @ " << +nib[1] << "\n";
            //std::cout << "\t y: " << +ycoord << "\t yraw: " << +gp_reg[nib[2]] << " @ " << +nib[2] << "\n";
            //std::cout << "N: " << +nib[3] << "\n";
@@ -135,9 +128,6 @@ void Chip8::emulateCycle(){
                     //std::cout << +pxLoc << "\n";
                     uint8_t pixel = gfx[pxLoc];
 
-                    
-
-                    //bool sprtOn = sprite & (0x1 << (7 - col));
                     //if the sprite pixel is 'on'
                     if(sprite & (0x1 << (7 - col))){
                         //pixel is 'on' AND sprite pixel is 'on'
