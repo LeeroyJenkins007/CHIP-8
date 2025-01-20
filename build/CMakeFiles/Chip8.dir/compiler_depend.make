@@ -279,9 +279,7 @@ CMakeFiles/Chip8.dir/emulator.cpp.obj: D:/Workspace/C++/repos/CHIP-8/emulator.cp
   C:/msys64/ucrt64/include/corecrt_wstdlib.h \
   C:/msys64/ucrt64/include/crtdefs.h \
   C:/msys64/ucrt64/include/ctype.h \
-  C:/msys64/ucrt64/include/direct.h \
   C:/msys64/ucrt64/include/errno.h \
-  C:/msys64/ucrt64/include/io.h \
   C:/msys64/ucrt64/include/limits.h \
   C:/msys64/ucrt64/include/locale.h \
   C:/msys64/ucrt64/include/malloc.h \
@@ -740,10 +738,6 @@ C:/msys64/ucrt64/include/c++/13.1.0/ctime:
 C:/msys64/ucrt64/include/c++/13.1.0/limits:
 
 C:/msys64/ucrt64/include/c++/13.1.0/thread:
-
-C:/msys64/ucrt64/include/direct.h:
-
-C:/msys64/ucrt64/include/io.h:
 
 C:/msys64/ucrt64/include/sec_api/string_s.h:
 

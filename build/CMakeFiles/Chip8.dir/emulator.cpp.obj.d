@@ -134,9 +134,6 @@ CMakeFiles/Chip8.dir/emulator.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.1.0/bits/ostream.tcc \
  C:/msys64/ucrt64/include/c++/13.1.0/istream \
  C:/msys64/ucrt64/include/c++/13.1.0/bits/istream.tcc \
- C:/msys64/ucrt64/include/direct.h C:/msys64/ucrt64/include/io.h \
- C:/msys64/ucrt64/include/string.h \
- C:/msys64/ucrt64/include/sec_api/string_s.h \
  C:/msys64/ucrt64/include/c++/13.1.0/chrono \
  C:/msys64/ucrt64/include/c++/13.1.0/bits/chrono.h \
  C:/msys64/ucrt64/include/c++/13.1.0/ratio \
@@ -156,6 +153,8 @@ CMakeFiles/Chip8.dir/emulator.cpp.obj: \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdarg.h \
  C:/msys64/ucrt64/include/stdarg.h \
  C:/msys64/ucrt64/include/_mingw_stdarg.h \
+ C:/msys64/ucrt64/include/string.h \
+ C:/msys64/ucrt64/include/sec_api/string_s.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_begin_code.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_close_code.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_assert.h \

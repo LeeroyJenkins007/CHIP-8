@@ -1,5 +1,5 @@
 #include <iostream>
-#include <direct.h>
+//#include <direct.h>
 #include <chrono>
 #include <thread>
 #include <SDL3/SDL.h>
@@ -10,8 +10,15 @@ using namespace std;
 
 Chip8 myChip8;
 
-const char ROM[] = "../roms/2-ibm-logo.ch8";
 //const char ROM[] = "../roms/chip8-logo.ch8";
+//const char ROM[] = "../roms/2-ibm-logo.ch8";
+//const char  ROM[] = "../roms/3-corax+.ch8";
+const char  ROM[] = "../roms/4-flags.ch8";
+//const char  ROM[] = "../roms/5-quirks.ch8";
+//const char  ROM[] = "../roms/6-keypad.ch8";
+//const char  ROM[] = "../roms/7-beep.ch8";
+//const char  ROM[] = "../roms/8-scrolling.ch8";
+
 
 int main(){
 
@@ -102,7 +109,7 @@ int main(){
         }
         //cin >> input;
         //slow down the cycles
-        this_thread::sleep_for(chrono::milliseconds(100));
+        this_thread::sleep_for(chrono::milliseconds(10));
     }
 
 

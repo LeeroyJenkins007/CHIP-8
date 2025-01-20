@@ -162,18 +162,25 @@ void Chip8::emulateCycle(){
                 case 0x6:
                     //8XY6
                     //VX = VY, VF = VX[0], VX >> 1
-                    gp_reg[nib[1]] = gp_reg[nib[2]];
+                    //Classic Chip-8 quirk
+                    gp_reg[nib[1]] = (gp_reg[nib[2]] >> 1);
+                    gp_reg[0xF] = 0x01 & gp_reg[nib[1]];
+                    //gp_reg[nib[1]] >>= gp_reg[nib[1]];
                     
                     return; 
                 case 0x7:
                     //8XY7
                     //VX = VY - VX
-                    gp_reg[nib[2]] -= gp_reg[nib[1]];
+                    gp_reg[nib[1]] = gp_reg[nib[2]] - gp_reg[nib[1]];
                     gp_reg[0xF] = gp_reg[nib[1]] > (0xFF - gp_reg[nib[2]]) ? 0 : 1;
                     return;
                 case 0xE:
                     //8XY8
                     //VX = VY, VF = VX[7], VY << 1
+                    //Classic Chip-8 quirk
+                    gp_reg[nib[1]] = (gp_reg[nib[2]] << 1);
+                    gp_reg[0xF] = 0xE0 & gp_reg[nib[1]];
+                    //gp_reg[nib[1]] <<= gp_reg[nib[1]];
                     return;
                 default:
                     std::cout << "Not a valid opcode: " << std::hex << opCode << std::endl;
@@ -184,7 +191,7 @@ void Chip8::emulateCycle(){
             //9XY0
             //if VX != VY, skip
             //std::cout << "opcode 9\n";
-            if(gp_reg[nib[1]] != gp_reg[2])
+            if(gp_reg[nib[1]] != gp_reg[nib[2]])
                 pc += 2;
             return;
         case 0xA:
@@ -247,7 +254,50 @@ void Chip8::emulateCycle(){
             std::cout << "opcode E\n";
             return;
         case 0xF:
-            std::cout << "opcode F\n";
+            //std::cout << "opcode F\n";
+            switch((nib[2] << 4) | nib[3]){
+                case 0x1E:
+                    //FX1E
+                    
+                    if(gp_reg[nib[1]] + I > 0x0FFF){
+                        gp_reg[0xF] = 1;
+                        I = (gp_reg[nib[1]] + I) & 0x0FFF;
+                    }else{
+                        I += gp_reg[nib[1]];
+                    }
+                    
+                    //I += gp_reg[];
+                    return;
+                case 0x33:{
+                    //FX33
+                    uint8_t remainder = gp_reg[nib[1]];
+                    uint8_t digit = 0;
+                    for(int cnt = 0; cnt < 3; cnt++){
+                        digit = remainder % 10;
+                        remainder /= 10;
+                        memory[I + (2 - cnt)] = digit;
+                    }
+                    return;
+                }
+                case 0x55:
+                    //FX55
+                    //load V0 - VX into memory[I - X]
+                    for(int idx = 0; idx <= nib[1]; idx++){
+                        memory[I + idx] = gp_reg[idx];
+                    }
+                    return;
+                case 0x65:
+                    //FX65
+                    //load memory[I - X] into V0 - VX registers
+                    for(int idx = 0; idx <= nib[1]; idx++){
+                        gp_reg[idx] = memory[I + idx];
+                    }
+                    return;
+                default:
+                    std::cout << "Not a valid opcode: " << std::hex << opCode << std::endl;
+                    return;
+            }
+
             return;
         default:
             std::cout << "Not a valid opcode: " << std::hex << opCode << std::endl;
