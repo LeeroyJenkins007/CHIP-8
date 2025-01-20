@@ -147,12 +147,14 @@ void Chip8::emulateCycle(){
                     //VX = VX XOR VY
                     gp_reg[nib[1]] = gp_reg[nib[1]] ^ gp_reg[nib[2]];
                     return;
-                case 0x4:
+                case 0x4:{
                     //8XY4
                     //VX = VX + VY, with carry -> VF
+                    uint8_t carry = gp_reg[nib[2]] > (0xFF - gp_reg[nib[1]]) ? 1 : 0;
                     gp_reg[nib[1]] += gp_reg[nib[2]];
-                    gp_reg[0xF] = gp_reg[nib[2]] > (0xFF - gp_reg[nib[1]]) ? 1 : 0;
+                    gp_reg[0xF] = carry;
                     return;
+                }
                 case 0x5:
                     //8XY5
                     //VX = VX - VY
@@ -179,7 +181,7 @@ void Chip8::emulateCycle(){
                     //VX = VY, VF = VX[7], VY << 1
                     //Classic Chip-8 quirk
                     gp_reg[nib[1]] = (gp_reg[nib[2]] << 1);
-                    gp_reg[0xF] = 0xE0 & gp_reg[nib[1]];
+                    gp_reg[0xF] = 0x80 & gp_reg[nib[1]];
                     //gp_reg[nib[1]] <<= gp_reg[nib[1]];
                     return;
                 default:
