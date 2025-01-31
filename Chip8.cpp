@@ -161,29 +161,33 @@ void Chip8::emulateCycle(){
                     gp_reg[nib[1]] -= gp_reg[nib[2]];
                     gp_reg[0xF] = gp_reg[nib[2]] > (0xFF - gp_reg[nib[1]]) ? 0 : 1;
                     return;
-                case 0x6:
+                case 0x6:{
                     //8XY6
                     //VX = VY, VF = VX[0], VX >> 1
                     //Classic Chip-8 quirk
-                    gp_reg[nib[1]] = (gp_reg[nib[2]] >> 1);
-                    gp_reg[0xF] = 0x01 & gp_reg[nib[1]];
+                    uint8_t temp = gp_reg[nib[2]];
+                    gp_reg[nib[1]] = (temp >> 1);
+                    gp_reg[0xF] = 0x01 & temp;
                     //gp_reg[nib[1]] >>= gp_reg[nib[1]];
                     
                     return; 
+                }
                 case 0x7:
                     //8XY7
                     //VX = VY - VX
                     gp_reg[nib[1]] = gp_reg[nib[2]] - gp_reg[nib[1]];
                     gp_reg[0xF] = gp_reg[nib[1]] > (0xFF - gp_reg[nib[2]]) ? 0 : 1;
                     return;
-                case 0xE:
+                case 0xE:{
                     //8XY8
                     //VX = VY, VF = VX[7], VY << 1
                     //Classic Chip-8 quirk
-                    gp_reg[nib[1]] = (gp_reg[nib[2]] << 1);
-                    gp_reg[0xF] = 0x80 & gp_reg[nib[1]];
+                    uint8_t temp = gp_reg[nib[2]];
+                    gp_reg[nib[1]] = (temp << 1);
+                    gp_reg[0xF] = (0x80 & temp) >> 7;
                     //gp_reg[nib[1]] <<= gp_reg[nib[1]];
                     return;
+                }
                 default:
                     std::cout << "Not a valid opcode: " << std::hex << opCode << std::endl;
                     return;

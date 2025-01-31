@@ -1,5 +1,4 @@
 #include <iostream>
-//#include <direct.h>
 #include <chrono>
 #include <thread>
 #include <SDL3/SDL.h>
@@ -13,9 +12,9 @@ Chip8 myChip8;
 //const char ROM[] = "../roms/chip8-logo.ch8";
 //const char ROM[] = "../roms/2-ibm-logo.ch8";
 //const char  ROM[] = "../roms/3-corax+.ch8";
-const char  ROM[] = "../roms/4-flags.ch8";
+//const char  ROM[] = "../roms/4-flags.ch8";
 //const char  ROM[] = "../roms/5-quirks.ch8";
-//const char  ROM[] = "../roms/6-keypad.ch8";
+const char  ROM[] = "../roms/6-keypad.ch8";
 //const char  ROM[] = "../roms/7-beep.ch8";
 //const char  ROM[] = "../roms/8-scrolling.ch8";
 
@@ -35,7 +34,6 @@ int main(){
     }
 
     // sizing using 'logical sizes' so it's not actual pixle size
-    //window = SDL_CreateWindow("CHIP-8", PXL_WIDTH * 20, PXL_HEIGHT * 20, SDL_WINDOW_RESIZABLE);
     window = SDL_CreateWindow("CHIP-8 Emulator", PXL_WIDTH * 10, PXL_HEIGHT * 10, SDL_WINDOW_RESIZABLE);
     if(!window){
         SDL_LogCritical(SDL_LOG_CATEGORY_VIDEO, SDL_GetError());
@@ -50,33 +48,14 @@ int main(){
         cout << "Renderer Created\n";
     }
 
-    //SDL_SetRenderLogicalPresentation(renderer, PXL_WIDTH, PXL_HEIGHT, SDL_LOGICAL_PRESENTATION_INTEGER_SCALE);
-    //SDL_RendererLogicalPresentation(SDL_LOGICAL_PRESENTATION_DISABLED);
-
-    /*
-    //char buffer[1024];
-    //cout << "CWD: " << getcwd(buffer, 1024) << "\n";
-    bitmapSurface = SDL_LoadBMP("../testData/snail.bmp");
-    if(bitmapSurface == NULL){
-        cout << "Failed to find Surface: " << SDL_GetError() << "\n";
-    }
-
-    bitmapTex = SDL_CreateTextureFromSurface(renderer, bitmapSurface);
-    if(bitmapTex == NULL){
-        cout << "Failed to create texture: " << SDL_GetError() << "\n";
-    }
-    SDL_DestroySurface(bitmapSurface);
-    */
-
     //create texture
     screenTexture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING, PXL_WIDTH, PXL_HEIGHT);
+    SDL_SetTextureScaleMode(screenTexture, SDL_SCALEMODE_NEAREST);
 
 
     myChip8.initialize();
-    //myChip8.printMe();
 
     myChip8.loadGame(ROM);
-    //myChip8.printMem(0x50, 650);
     
 
     //string input;
@@ -107,7 +86,6 @@ int main(){
             SDL_RenderTexture(renderer, screenTexture, NULL, NULL);
             SDL_RenderPresent(renderer);
         }
-        //cin >> input;
         //slow down the cycles
         this_thread::sleep_for(chrono::milliseconds(10));
     }
@@ -117,6 +95,5 @@ int main(){
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
     SDL_QuitSubSystem(SDL_INIT_VIDEO);
-    //myChip8.Grant();
     return 0;
 }
