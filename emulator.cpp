@@ -4,6 +4,7 @@
 #include <SDL3/SDL.h>
 
 #include "Chip8.h"
+#include "Platform.h"
 
 using namespace std;
 
@@ -24,11 +25,13 @@ int main(){
     SDL_Window *window = NULL;
     SDL_Renderer *renderer = NULL;
     SDL_Texture *screenTexture = NULL;
-    SDL_Surface *bitmapSurface = NULL;
+    //SDL_Surface *bitmapSurface = NULL;
 
     uint32_t pixels[PXL_HEIGHT * PXL_WIDTH];
 
+    Platform platform("CHIP-8 Emulator", PXL_WIDTH * 10, PXL_HEIGHT * 10, PXL_WIDTH, PXL_HEIGHT);
 
+    /*
     if(!SDL_InitSubSystem(SDL_INIT_VIDEO)){
         SDL_LogCritical(SDL_LOG_CATEGORY_VIDEO, SDL_GetError());
     }
@@ -52,6 +55,7 @@ int main(){
     screenTexture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING, PXL_WIDTH, PXL_HEIGHT);
     SDL_SetTextureScaleMode(screenTexture, SDL_SCALEMODE_NEAREST);
 
+    */
 
     myChip8.initialize();
 
@@ -87,19 +91,20 @@ int main(){
                 pixels[i] = (0x00FFFFFF * pixel) | 0xFF000000;
             }
             //Rendering code
-            SDL_UpdateTexture(screenTexture, NULL, pixels, PXL_WIDTH * sizeof(uint32_t));
-            SDL_RenderClear(renderer);
-            SDL_RenderTexture(renderer, screenTexture, NULL, NULL);
-            SDL_RenderPresent(renderer);
+            
+            SDL_UpdateTexture(platform.screenTexture, NULL, pixels, PXL_WIDTH * sizeof(uint32_t));
+            SDL_RenderClear(platform.renderer);
+            SDL_RenderTexture(platform.renderer, platform.screenTexture, NULL, NULL);
+            SDL_RenderPresent(platform.renderer);
         }
         //slow down the cycles
         this_thread::sleep_for(chrono::milliseconds(10));
     }
 
 
-    SDL_DestroyTexture(screenTexture);
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
+    SDL_DestroyTexture(platform.screenTexture);
+    SDL_DestroyRenderer(platform.renderer);
+    SDL_DestroyWindow(platform.window);
     SDL_QuitSubSystem(SDL_INIT_VIDEO);
     return 0;
 }

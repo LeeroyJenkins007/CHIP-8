@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Chip8.dir/Chip8.cpp.obj"
   "CMakeFiles/Chip8.dir/Chip8.cpp.obj.d"
+  "CMakeFiles/Chip8.dir/Platform.cpp.obj"
+  "CMakeFiles/Chip8.dir/Platform.cpp.obj.d"
   "CMakeFiles/Chip8.dir/emulator.cpp.obj"
   "CMakeFiles/Chip8.dir/emulator.cpp.obj.d"
   "Chip8.exe"

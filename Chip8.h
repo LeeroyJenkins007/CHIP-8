@@ -43,6 +43,8 @@ class Chip8 {
         uint8_t memory[MEMORY_SIZE];
         //current opcode
         uint16_t opCode;
+        //keypad
+        uint8_t keypad[16];
     public:
         Chip8();
         void initialize();

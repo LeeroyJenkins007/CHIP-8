@@ -9,6 +9,6 @@ set(EXECUTABLE_NAME ${PROJECT_NAME})
 
 add_subdirectory(thirdparty/SDL EXCLUDE_FROM_ALL)
 
-add_executable(${EXECUTABLE_NAME} emulator.cpp Chip8.cpp Chip8.h)
+add_executable(${EXECUTABLE_NAME} emulator.cpp Chip8.cpp Chip8.h Platform.cpp Platform.h)
 
 target_link_libraries(${EXECUTABLE_NAME} PRIVATE SDL3::SDL3)

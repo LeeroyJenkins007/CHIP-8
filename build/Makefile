@@ -191,6 +191,30 @@ Chip8.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/Chip8.cpp.s
 .PHONY : Chip8.cpp.s
 
+Platform.obj: Platform.cpp.obj
+.PHONY : Platform.obj
+
+# target to build an object file
+Platform.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/Platform.cpp.obj
+.PHONY : Platform.cpp.obj
+
+Platform.i: Platform.cpp.i
+.PHONY : Platform.i
+
+# target to preprocess a source file
+Platform.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/Platform.cpp.i
+.PHONY : Platform.cpp.i
+
+Platform.s: Platform.cpp.s
+.PHONY : Platform.s
+
+# target to generate assembly for a file
+Platform.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/Platform.cpp.s
+.PHONY : Platform.cpp.s
+
 emulator.obj: emulator.cpp.obj
 .PHONY : emulator.obj
 
@@ -230,6 +254,9 @@ help:
 	@echo ... Chip8.obj
 	@echo ... Chip8.i
 	@echo ... Chip8.s
+	@echo ... Platform.obj
+	@echo ... Platform.i
+	@echo ... Platform.s
 	@echo ... emulator.obj
 	@echo ... emulator.i
 	@echo ... emulator.s

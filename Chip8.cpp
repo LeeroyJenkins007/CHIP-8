@@ -20,6 +20,7 @@ void Chip8::initialize(){
     for(int idx = 0; idx < STACK_SIZE; idx++){
         stack[idx] = 0;
         gp_reg[idx] = 0;
+        keypad[idx] = 0;
     }
 
     //load font set into memory 0x50 - 0x9F
@@ -58,21 +59,24 @@ void Chip8::emulateCycle(){
         case 0x0:
             //std::cout << "opcode 0\n";
             //std::cout << "back sequence: " << (nib[2]<<4 | nib[3]) << std::endl;
-            switch((nib[1]<<8) | (nib[2]<<4) | nib[3]){
+            switch((nib[2]<<4) | nib[3]){
+                //std::cout << std::hex << "Opcode: 0x" << +((nib[1]<<8) | (nib[2]<<4) | nib[3]) << "\n";
                 // cls
-                case 0x0E0:
+                case 0xE0:
                     //00E0
                     //clear screen
                     //std::cout << "CLS\n";
                     clearScreen();
                     drawFlag = true;
                     return;
-                case 0x0EE:
+                case 0xEE:
                     pc = stack[sp-1];
                     --sp;
                     return;
                 default:
-                    std::cout << "Opcode: 0xNNN\n";
+                    //std::cout << std::hex << "Opcode: 0x" << +((nib[1]<<8) | (nib[2]<<4) | nib[3]) << "\n";
+                    std::cout << "Should be 0xNNN\n";
+                    std::cout << "Not a valid opcode: " << std::hex << +opCode << std::endl;
                     return;
             }
 
@@ -82,6 +86,7 @@ void Chip8::emulateCycle(){
             //jump -> NNN
             //std::cout << "opcode 1\n";
             uint16_t jmpAddr = (nib[1]<<8 | nib[2]<<4 | nib[3]);
+            //std::cout << "JUMP: 0x" << +(nib[1]<<8 | nib[2]<<4 | nib[3]) << " VS Op: 0x" << (opCode & 0x0FFFu) << "\n";
             pc = jmpAddr;
             //std::cout << "JUMP to " << std::hex << jmpAddr << std::endl;
             return;
@@ -266,6 +271,20 @@ void Chip8::emulateCycle(){
             }
         case 0xE:
             //std::cout << "opcode E\n";
+            switch (nib[3]){
+                case 0xE:
+                    //EX9E
+                    //if key==VX, then pc += 2
+
+                    return;
+                case 0x1:
+                    //EXA1
+                    //if key!=VX, then pc += 2
+                    return;
+                default:
+                    std::cout << "Not a valid opcode: " << std::hex << opCode << std::endl;
+                    return;
+            }
             return;
         case 0xF:
             //std::cout << "opcode F\n";
@@ -308,16 +327,29 @@ void Chip8::emulateCycle(){
                     }
                     return;
                 default:
-                    std::cout << "Not a valid opcode: " << std::hex << opCode << std::endl;
+                    std::cout << "Not a valid opcode: " << std::hex << +opCode << std::endl;
                     return;
             }
 
             return;
         default:
-            std::cout << "Not a valid opcode: " << std::hex << opCode << std::endl;
+            std::cout << "Not a valid opcode: " << std::hex << +opCode << std::endl;
             return;
     }
     // Execute Opcode
+
+    //Update timers
+    if (delay_t > 0){
+        --delay_t;
+    }
+    
+    if (sound_t > 0){
+        if (sound_t == 1){
+            std::cout << "BEEP!\n"; 
+        }
+        --sound_t;
+    }
+
 }
 
 void Chip8::loadGame(const char fname[]){
