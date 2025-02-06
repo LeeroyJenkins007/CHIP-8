@@ -67,6 +67,12 @@ int main(){
             if(event.type == SDL_EVENT_QUIT){
                 isRunning = false;
             }
+
+            if(event.type == SDL_EVENT_KEY_DOWN){
+                if(event.key.key == SDLK_ESCAPE){
+                    isRunning = false;
+                }
+            }
         }
         
         myChip8.emulateCycle();

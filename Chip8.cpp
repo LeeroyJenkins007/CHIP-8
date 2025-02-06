@@ -58,22 +58,24 @@ void Chip8::emulateCycle(){
         case 0x0:
             //std::cout << "opcode 0\n";
             //std::cout << "back sequence: " << (nib[2]<<4 | nib[3]) << std::endl;
-            switch(nib[2]<<4 | nib[3]){
+            switch((nib[1]<<8) | (nib[2]<<4) | nib[3]){
                 // cls
-                case 0xE0:
+                case 0x0E0:
                     //00E0
                     //clear screen
                     //std::cout << "CLS\n";
                     clearScreen();
                     drawFlag = true;
                     return;
-                case 0xEE:
+                case 0x0EE:
                     pc = stack[sp-1];
                     --sp;
                     return;
                 default:
+                    std::cout << "Opcode: 0xNNN\n";
                     return;
             }
+
             return;
         case 0x1:{
             //1NNN
@@ -207,10 +209,16 @@ void Chip8::emulateCycle(){
             //std::cout << "New I: " << std::hex << I << "\n";
             return;
         case 0xB:
-            std::cout << "opcode B\n";
+            //BNNN
+            //Jmp NNN + V0
+            //std::cout << "opcode B\n";
+            pc = ((nib[1]<<8) | (nib[2]<<4) | nib[3]) + gp_reg[0]; 
             return;
         case 0xC:
-            std::cout << "opcode C\n";
+            //CXNN
+            //VX = Rand() & NN
+            //std::cout << "opcode C\n";
+            gp_reg[nib[1]] = (std::rand() % (2^8 - 1)) & ((nib[2]<<4) | nib[3]);
             return;
         case 0xD:{
             //sprite vx,vy,n
@@ -257,7 +265,7 @@ void Chip8::emulateCycle(){
             return;
             }
         case 0xE:
-            std::cout << "opcode E\n";
+            //std::cout << "opcode E\n";
             return;
         case 0xF:
             //std::cout << "opcode F\n";
