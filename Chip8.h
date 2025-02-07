@@ -43,8 +43,6 @@ class Chip8 {
         uint8_t memory[MEMORY_SIZE];
         //current opcode
         uint16_t opCode;
-        //keypad
-        uint8_t keypad[16];
     public:
         Chip8();
         void initialize();
@@ -58,6 +56,8 @@ class Chip8 {
         uint8_t gfx[PXL_HEIGHT * PXL_WIDTH];
         //flag if pixels were changed
         bool drawFlag;
+        //keypad
+        uint8_t keypad[16];
 };
 
 #endif /*CHIP8_H*/

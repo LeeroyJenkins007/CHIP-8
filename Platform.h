@@ -11,7 +11,9 @@ class Platform {
 
     public:
         Platform(const char*, int, int, int, int);
-        void Update();
+        void Update(const void*, int);
+        void destroy();
+        bool ProcessInput(uint8_t*);
 };
 
 #endif

@@ -147,6 +147,8 @@ CMakeFiles/Chip8.dir/emulator.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.1.0/bits/std_thread.h \
  C:/msys64/ucrt64/include/c++/13.1.0/bits/unique_ptr.h \
  C:/msys64/ucrt64/include/c++/13.1.0/bits/this_thread_sleep.h \
+ D:\Workspace\C++\repos\CHIP-8\Chip8.h \
+ D:\Workspace\C++\repos\CHIP-8\Platform.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_stdinc.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_platform_defines.h \
@@ -210,6 +212,4 @@ CMakeFiles/Chip8.dir/emulator.cpp.obj: \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_timer.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_tray.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_version.h \
- D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_oldnames.h \
- D:\Workspace\C++\repos\CHIP-8\Chip8.h \
- D:\Workspace\C++\repos\CHIP-8\Platform.h
+ D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_oldnames.h
