@@ -25,7 +25,7 @@ void Chip8::initialize(){
 
     //load font set into memory 0x50 - 0x9F
     for(uint8_t idx = 0; idx < 80; idx++){
-        memory[idx+0x50] = fontset[idx];
+        memory[idx+FONT_OFFSET] = fontset[idx];
     }
 
 }
@@ -275,11 +275,14 @@ void Chip8::emulateCycle(){
                 case 0xE:
                     //EX9E
                     //if key==VX, then pc += 2
-
+                    if (keypad[gp_reg[nib[1]]] == 1)
+                        pc += 2;
                     return;
                 case 0x1:
                     //EXA1
                     //if key!=VX, then pc += 2
+                    if (keypad[gp_reg[nib[1]]] == 0)
+                        pc += 2;
                     return;
                 default:
                     std::cout << "Not a valid opcode: " << std::hex << opCode << std::endl;
@@ -289,6 +292,32 @@ void Chip8::emulateCycle(){
         case 0xF:
             //std::cout << "opcode F\n";
             switch((nib[2] << 4) | nib[3]){
+                case 0x07:
+                    //FX07
+                    gp_reg[nib[1]] = delay_t;
+                    break;
+                case 0x0A:{
+                        //FX0A
+                        bool change = false;
+                        for(uint8_t index = 0; index < STACK_SIZE; ++index){
+                            uint8_t key = keypad[index];
+                            if (key > 0){
+                                gp_reg[nib[1]] = index;
+                                change = true;
+                            }
+                        }
+                        if (!change)
+                            pc -= 2;
+                    }
+                    break;
+                case 0x15:
+                    //FX15
+                    delay_t = gp_reg[nib[1]];
+                    break;
+                case 0x18:
+                    //FX18
+                    sound_t = gp_reg[nib[1]];
+                    break;
                 case 0x1E:
                     //FX1E
                     
@@ -301,6 +330,10 @@ void Chip8::emulateCycle(){
                     
                     //I += gp_reg[];
                     return;
+                case 0x29:
+                    //FX29
+                    I = FONT_OFFSET + gp_reg[nib[1]];
+                    break;
                 case 0x33:{
                     //FX33
                     uint8_t remainder = gp_reg[nib[1]];

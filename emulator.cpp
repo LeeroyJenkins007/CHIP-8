@@ -18,6 +18,7 @@ Chip8 myChip8;
 const char  ROM[] = "../roms/6-keypad.ch8";
 //const char  ROM[] = "../roms/7-beep.ch8";
 //const char  ROM[] = "../roms/8-scrolling.ch8";
+//const char ROM[] = "../roms/test_opcode.ch8";
 
 
 int main(){
@@ -54,7 +55,7 @@ int main(){
             platform.Update(pixels, PXL_WIDTH * sizeof(uint32_t));
         }
         //slow down the cycles
-        this_thread::sleep_for(chrono::milliseconds(10));
+        //this_thread::sleep_for(chrono::milliseconds(5));
     }
 
 

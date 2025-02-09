@@ -7,6 +7,7 @@ const uint8_t GP_REG_SIZE = 16;
 const uint8_t PXL_WIDTH = 64;
 const uint8_t PXL_HEIGHT = 32;
 const uint8_t STACK_SIZE = 16;
+const uint16_t FONT_OFFSET = 0x50;
 
 const uint16_t fontset[80] = {
     0xF0, 0x90, 0x90, 0x90, 0xF0, // 0

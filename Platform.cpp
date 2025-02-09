@@ -46,9 +46,9 @@ bool Platform::ProcessInput(uint8_t* keypad){
         switch(event.type){
             case SDL_EVENT_QUIT:
                 quit = true;
-                break;
-            
+                break;    
             case SDL_EVENT_KEY_DOWN:
+                std::cout << "Key Press Down\n";
                 switch(event.key.key){
                     case SDLK_ESCAPE:
                         quit = true;
@@ -102,9 +102,12 @@ bool Platform::ProcessInput(uint8_t* keypad){
                         keypad[0xF] = 1;
                         break;
                     default:
+                        //std::cout << "Unknown Key Down\n";
                         break;
                 }
+                break;
             case SDL_EVENT_KEY_UP:
+                std::cout << "Key Press UP\n";
                 switch(event.key.key){
                     case SDLK_ESCAPE:
                         quit = true;
@@ -158,11 +161,14 @@ bool Platform::ProcessInput(uint8_t* keypad){
                         keypad[0xF] = 0;
                         break;
                     default:
+                        //std::cout << "Unknown Key Up\n";
                         break;
                 }
-            default:
                 break;
-        }
+            default: //event type
+                //std::cout << "unknown event type\n";
+                break;
+        }//Switch EVENT TYPE
     } //while Poll events
     return quit;
 }
