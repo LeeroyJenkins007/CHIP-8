@@ -238,23 +238,18 @@ void Chip8::emulateCycle(){
            gp_reg[0xF] = 0;
            for(uint8_t row = 0; row < nib[3]; row++){
                 uint8_t sprite = memory[I + row];
-                //std::cout << "Row: " << +row << "\n";
                 
                 for(uint8_t col = 0; col < 8; col++){
                     uint16_t pxLoc = xcoord + col + ((ycoord + row )*PXL_WIDTH);
-                    //std::cout << "Col: " << +col << "\n";
-                    //std::cout << +pxLoc << "\n";
                     uint8_t pixel = gfx[pxLoc];
 
                     //if the sprite pixel is 'on'
                     if(sprite & (0x1 << (7 - col))){
                         //pixel is 'on' AND sprite pixel is 'on'
                         if(pixel){
-                            //gfx[pxLoc] = 0;
                             gp_reg[0xF] = 1;
-                        }else{
-                            gfx[pxLoc] ^= 1;
                         }
+                        gfx[pxLoc] ^= 1;
 
                     }
 
@@ -298,10 +293,11 @@ void Chip8::emulateCycle(){
                     break;
                 case 0x0A:{
                         //FX0A
+                        //std::cout << "Waiting for keypress...\n";
                         bool change = false;
                         for(uint8_t index = 0; index < STACK_SIZE; ++index){
                             uint8_t key = keypad[index];
-                            if (key > 0){
+                            if (key != 0){
                                 gp_reg[nib[1]] = index;
                                 change = true;
                             }

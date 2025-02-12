@@ -48,7 +48,7 @@ bool Platform::ProcessInput(uint8_t* keypad){
                 quit = true;
                 break;    
             case SDL_EVENT_KEY_DOWN:
-                std::cout << "Key Press Down\n";
+                //std::cout << "Key Press Down\n";
                 switch(event.key.key){
                     case SDLK_ESCAPE:
                         quit = true;
@@ -107,7 +107,7 @@ bool Platform::ProcessInput(uint8_t* keypad){
                 }
                 break;
             case SDL_EVENT_KEY_UP:
-                std::cout << "Key Press UP\n";
+                //std::cout << "Key Press UP\n";
                 switch(event.key.key){
                     case SDLK_ESCAPE:
                         quit = true;
