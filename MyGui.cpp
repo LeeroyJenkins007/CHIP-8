@@ -1,7 +1,5 @@
 #include "MyGui.h"
 
-//#include <SDL3/SDL.h>
-
 MyGui::MyGui(SDL_Window* window, SDL_Renderer* renderer){
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();

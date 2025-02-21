@@ -263,6 +263,174 @@ emulator.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/emulator.cpp.s
 .PHONY : emulator.cpp.s
 
+thirdparty/imgui_docking/backends/imgui_impl_sdl3.obj: thirdparty/imgui_docking/backends/imgui_impl_sdl3.cpp.obj
+.PHONY : thirdparty/imgui_docking/backends/imgui_impl_sdl3.obj
+
+# target to build an object file
+thirdparty/imgui_docking/backends/imgui_impl_sdl3.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdl3.cpp.obj
+.PHONY : thirdparty/imgui_docking/backends/imgui_impl_sdl3.cpp.obj
+
+thirdparty/imgui_docking/backends/imgui_impl_sdl3.i: thirdparty/imgui_docking/backends/imgui_impl_sdl3.cpp.i
+.PHONY : thirdparty/imgui_docking/backends/imgui_impl_sdl3.i
+
+# target to preprocess a source file
+thirdparty/imgui_docking/backends/imgui_impl_sdl3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdl3.cpp.i
+.PHONY : thirdparty/imgui_docking/backends/imgui_impl_sdl3.cpp.i
+
+thirdparty/imgui_docking/backends/imgui_impl_sdl3.s: thirdparty/imgui_docking/backends/imgui_impl_sdl3.cpp.s
+.PHONY : thirdparty/imgui_docking/backends/imgui_impl_sdl3.s
+
+# target to generate assembly for a file
+thirdparty/imgui_docking/backends/imgui_impl_sdl3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdl3.cpp.s
+.PHONY : thirdparty/imgui_docking/backends/imgui_impl_sdl3.cpp.s
+
+thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.obj: thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.cpp.obj
+.PHONY : thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.obj
+
+# target to build an object file
+thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.cpp.obj
+.PHONY : thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.cpp.obj
+
+thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.i: thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.cpp.i
+.PHONY : thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.i
+
+# target to preprocess a source file
+thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.cpp.i
+.PHONY : thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.cpp.i
+
+thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.s: thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.cpp.s
+.PHONY : thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.s
+
+# target to generate assembly for a file
+thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.cpp.s
+.PHONY : thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.cpp.s
+
+thirdparty/imgui_docking/imgui.obj: thirdparty/imgui_docking/imgui.cpp.obj
+.PHONY : thirdparty/imgui_docking/imgui.obj
+
+# target to build an object file
+thirdparty/imgui_docking/imgui.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui.cpp.obj
+.PHONY : thirdparty/imgui_docking/imgui.cpp.obj
+
+thirdparty/imgui_docking/imgui.i: thirdparty/imgui_docking/imgui.cpp.i
+.PHONY : thirdparty/imgui_docking/imgui.i
+
+# target to preprocess a source file
+thirdparty/imgui_docking/imgui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui.cpp.i
+.PHONY : thirdparty/imgui_docking/imgui.cpp.i
+
+thirdparty/imgui_docking/imgui.s: thirdparty/imgui_docking/imgui.cpp.s
+.PHONY : thirdparty/imgui_docking/imgui.s
+
+# target to generate assembly for a file
+thirdparty/imgui_docking/imgui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui.cpp.s
+.PHONY : thirdparty/imgui_docking/imgui.cpp.s
+
+thirdparty/imgui_docking/imgui_demo.obj: thirdparty/imgui_docking/imgui_demo.cpp.obj
+.PHONY : thirdparty/imgui_docking/imgui_demo.obj
+
+# target to build an object file
+thirdparty/imgui_docking/imgui_demo.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_demo.cpp.obj
+.PHONY : thirdparty/imgui_docking/imgui_demo.cpp.obj
+
+thirdparty/imgui_docking/imgui_demo.i: thirdparty/imgui_docking/imgui_demo.cpp.i
+.PHONY : thirdparty/imgui_docking/imgui_demo.i
+
+# target to preprocess a source file
+thirdparty/imgui_docking/imgui_demo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_demo.cpp.i
+.PHONY : thirdparty/imgui_docking/imgui_demo.cpp.i
+
+thirdparty/imgui_docking/imgui_demo.s: thirdparty/imgui_docking/imgui_demo.cpp.s
+.PHONY : thirdparty/imgui_docking/imgui_demo.s
+
+# target to generate assembly for a file
+thirdparty/imgui_docking/imgui_demo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_demo.cpp.s
+.PHONY : thirdparty/imgui_docking/imgui_demo.cpp.s
+
+thirdparty/imgui_docking/imgui_draw.obj: thirdparty/imgui_docking/imgui_draw.cpp.obj
+.PHONY : thirdparty/imgui_docking/imgui_draw.obj
+
+# target to build an object file
+thirdparty/imgui_docking/imgui_draw.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_draw.cpp.obj
+.PHONY : thirdparty/imgui_docking/imgui_draw.cpp.obj
+
+thirdparty/imgui_docking/imgui_draw.i: thirdparty/imgui_docking/imgui_draw.cpp.i
+.PHONY : thirdparty/imgui_docking/imgui_draw.i
+
+# target to preprocess a source file
+thirdparty/imgui_docking/imgui_draw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_draw.cpp.i
+.PHONY : thirdparty/imgui_docking/imgui_draw.cpp.i
+
+thirdparty/imgui_docking/imgui_draw.s: thirdparty/imgui_docking/imgui_draw.cpp.s
+.PHONY : thirdparty/imgui_docking/imgui_draw.s
+
+# target to generate assembly for a file
+thirdparty/imgui_docking/imgui_draw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_draw.cpp.s
+.PHONY : thirdparty/imgui_docking/imgui_draw.cpp.s
+
+thirdparty/imgui_docking/imgui_tables.obj: thirdparty/imgui_docking/imgui_tables.cpp.obj
+.PHONY : thirdparty/imgui_docking/imgui_tables.obj
+
+# target to build an object file
+thirdparty/imgui_docking/imgui_tables.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_tables.cpp.obj
+.PHONY : thirdparty/imgui_docking/imgui_tables.cpp.obj
+
+thirdparty/imgui_docking/imgui_tables.i: thirdparty/imgui_docking/imgui_tables.cpp.i
+.PHONY : thirdparty/imgui_docking/imgui_tables.i
+
+# target to preprocess a source file
+thirdparty/imgui_docking/imgui_tables.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_tables.cpp.i
+.PHONY : thirdparty/imgui_docking/imgui_tables.cpp.i
+
+thirdparty/imgui_docking/imgui_tables.s: thirdparty/imgui_docking/imgui_tables.cpp.s
+.PHONY : thirdparty/imgui_docking/imgui_tables.s
+
+# target to generate assembly for a file
+thirdparty/imgui_docking/imgui_tables.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_tables.cpp.s
+.PHONY : thirdparty/imgui_docking/imgui_tables.cpp.s
+
+thirdparty/imgui_docking/imgui_widgets.obj: thirdparty/imgui_docking/imgui_widgets.cpp.obj
+.PHONY : thirdparty/imgui_docking/imgui_widgets.obj
+
+# target to build an object file
+thirdparty/imgui_docking/imgui_widgets.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_widgets.cpp.obj
+.PHONY : thirdparty/imgui_docking/imgui_widgets.cpp.obj
+
+thirdparty/imgui_docking/imgui_widgets.i: thirdparty/imgui_docking/imgui_widgets.cpp.i
+.PHONY : thirdparty/imgui_docking/imgui_widgets.i
+
+# target to preprocess a source file
+thirdparty/imgui_docking/imgui_widgets.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_widgets.cpp.i
+.PHONY : thirdparty/imgui_docking/imgui_widgets.cpp.i
+
+thirdparty/imgui_docking/imgui_widgets.s: thirdparty/imgui_docking/imgui_widgets.cpp.s
+.PHONY : thirdparty/imgui_docking/imgui_widgets.s
+
+# target to generate assembly for a file
+thirdparty/imgui_docking/imgui_widgets.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_widgets.cpp.s
+.PHONY : thirdparty/imgui_docking/imgui_widgets.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -287,6 +455,27 @@ help:
 	@echo ... emulator.obj
 	@echo ... emulator.i
 	@echo ... emulator.s
+	@echo ... thirdparty/imgui_docking/backends/imgui_impl_sdl3.obj
+	@echo ... thirdparty/imgui_docking/backends/imgui_impl_sdl3.i
+	@echo ... thirdparty/imgui_docking/backends/imgui_impl_sdl3.s
+	@echo ... thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.obj
+	@echo ... thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.i
+	@echo ... thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.s
+	@echo ... thirdparty/imgui_docking/imgui.obj
+	@echo ... thirdparty/imgui_docking/imgui.i
+	@echo ... thirdparty/imgui_docking/imgui.s
+	@echo ... thirdparty/imgui_docking/imgui_demo.obj
+	@echo ... thirdparty/imgui_docking/imgui_demo.i
+	@echo ... thirdparty/imgui_docking/imgui_demo.s
+	@echo ... thirdparty/imgui_docking/imgui_draw.obj
+	@echo ... thirdparty/imgui_docking/imgui_draw.i
+	@echo ... thirdparty/imgui_docking/imgui_draw.s
+	@echo ... thirdparty/imgui_docking/imgui_tables.obj
+	@echo ... thirdparty/imgui_docking/imgui_tables.i
+	@echo ... thirdparty/imgui_docking/imgui_tables.s
+	@echo ... thirdparty/imgui_docking/imgui_widgets.obj
+	@echo ... thirdparty/imgui_docking/imgui_widgets.i
+	@echo ... thirdparty/imgui_docking/imgui_widgets.s
 .PHONY : help
 
 

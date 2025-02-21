@@ -131,12 +131,124 @@ CMakeFiles/Chip8.dir/MyGui.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Chip8.dir/MyGui.cpp.s"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Workspace\C++\repos\CHIP-8\MyGui.cpp -o CMakeFiles\Chip8.dir\MyGui.cpp.s
 
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui.cpp.obj: CMakeFiles/Chip8.dir/flags.make
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui.cpp.obj: CMakeFiles/Chip8.dir/includes_CXX.rsp
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui.cpp.obj: D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/imgui.cpp
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui.cpp.obj: CMakeFiles/Chip8.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\C++\repos\CHIP-8\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui.cpp.obj -MF CMakeFiles\Chip8.dir\thirdparty\imgui_docking\imgui.cpp.obj.d -o CMakeFiles\Chip8.dir\thirdparty\imgui_docking\imgui.cpp.obj -c D:\Workspace\C++\repos\CHIP-8\thirdparty\imgui_docking\imgui.cpp
+
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Workspace\C++\repos\CHIP-8\thirdparty\imgui_docking\imgui.cpp > CMakeFiles\Chip8.dir\thirdparty\imgui_docking\imgui.cpp.i
+
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Workspace\C++\repos\CHIP-8\thirdparty\imgui_docking\imgui.cpp -o CMakeFiles\Chip8.dir\thirdparty\imgui_docking\imgui.cpp.s
+
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_draw.cpp.obj: CMakeFiles/Chip8.dir/flags.make
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_draw.cpp.obj: CMakeFiles/Chip8.dir/includes_CXX.rsp
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_draw.cpp.obj: D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/imgui_draw.cpp
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_draw.cpp.obj: CMakeFiles/Chip8.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\C++\repos\CHIP-8\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_draw.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_draw.cpp.obj -MF CMakeFiles\Chip8.dir\thirdparty\imgui_docking\imgui_draw.cpp.obj.d -o CMakeFiles\Chip8.dir\thirdparty\imgui_docking\imgui_draw.cpp.obj -c D:\Workspace\C++\repos\CHIP-8\thirdparty\imgui_docking\imgui_draw.cpp
+
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_draw.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_draw.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Workspace\C++\repos\CHIP-8\thirdparty\imgui_docking\imgui_draw.cpp > CMakeFiles\Chip8.dir\thirdparty\imgui_docking\imgui_draw.cpp.i
+
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_draw.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_draw.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Workspace\C++\repos\CHIP-8\thirdparty\imgui_docking\imgui_draw.cpp -o CMakeFiles\Chip8.dir\thirdparty\imgui_docking\imgui_draw.cpp.s
+
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_widgets.cpp.obj: CMakeFiles/Chip8.dir/flags.make
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_widgets.cpp.obj: CMakeFiles/Chip8.dir/includes_CXX.rsp
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_widgets.cpp.obj: D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/imgui_widgets.cpp
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_widgets.cpp.obj: CMakeFiles/Chip8.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\C++\repos\CHIP-8\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_widgets.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_widgets.cpp.obj -MF CMakeFiles\Chip8.dir\thirdparty\imgui_docking\imgui_widgets.cpp.obj.d -o CMakeFiles\Chip8.dir\thirdparty\imgui_docking\imgui_widgets.cpp.obj -c D:\Workspace\C++\repos\CHIP-8\thirdparty\imgui_docking\imgui_widgets.cpp
+
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_widgets.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_widgets.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Workspace\C++\repos\CHIP-8\thirdparty\imgui_docking\imgui_widgets.cpp > CMakeFiles\Chip8.dir\thirdparty\imgui_docking\imgui_widgets.cpp.i
+
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_widgets.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_widgets.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Workspace\C++\repos\CHIP-8\thirdparty\imgui_docking\imgui_widgets.cpp -o CMakeFiles\Chip8.dir\thirdparty\imgui_docking\imgui_widgets.cpp.s
+
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_tables.cpp.obj: CMakeFiles/Chip8.dir/flags.make
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_tables.cpp.obj: CMakeFiles/Chip8.dir/includes_CXX.rsp
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_tables.cpp.obj: D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/imgui_tables.cpp
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_tables.cpp.obj: CMakeFiles/Chip8.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\C++\repos\CHIP-8\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_tables.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_tables.cpp.obj -MF CMakeFiles\Chip8.dir\thirdparty\imgui_docking\imgui_tables.cpp.obj.d -o CMakeFiles\Chip8.dir\thirdparty\imgui_docking\imgui_tables.cpp.obj -c D:\Workspace\C++\repos\CHIP-8\thirdparty\imgui_docking\imgui_tables.cpp
+
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_tables.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_tables.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Workspace\C++\repos\CHIP-8\thirdparty\imgui_docking\imgui_tables.cpp > CMakeFiles\Chip8.dir\thirdparty\imgui_docking\imgui_tables.cpp.i
+
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_tables.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_tables.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Workspace\C++\repos\CHIP-8\thirdparty\imgui_docking\imgui_tables.cpp -o CMakeFiles\Chip8.dir\thirdparty\imgui_docking\imgui_tables.cpp.s
+
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_demo.cpp.obj: CMakeFiles/Chip8.dir/flags.make
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_demo.cpp.obj: CMakeFiles/Chip8.dir/includes_CXX.rsp
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_demo.cpp.obj: D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/imgui_demo.cpp
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_demo.cpp.obj: CMakeFiles/Chip8.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\C++\repos\CHIP-8\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_demo.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_demo.cpp.obj -MF CMakeFiles\Chip8.dir\thirdparty\imgui_docking\imgui_demo.cpp.obj.d -o CMakeFiles\Chip8.dir\thirdparty\imgui_docking\imgui_demo.cpp.obj -c D:\Workspace\C++\repos\CHIP-8\thirdparty\imgui_docking\imgui_demo.cpp
+
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_demo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_demo.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Workspace\C++\repos\CHIP-8\thirdparty\imgui_docking\imgui_demo.cpp > CMakeFiles\Chip8.dir\thirdparty\imgui_docking\imgui_demo.cpp.i
+
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_demo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_demo.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Workspace\C++\repos\CHIP-8\thirdparty\imgui_docking\imgui_demo.cpp -o CMakeFiles\Chip8.dir\thirdparty\imgui_docking\imgui_demo.cpp.s
+
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdl3.cpp.obj: CMakeFiles/Chip8.dir/flags.make
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdl3.cpp.obj: CMakeFiles/Chip8.dir/includes_CXX.rsp
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdl3.cpp.obj: D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/backends/imgui_impl_sdl3.cpp
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdl3.cpp.obj: CMakeFiles/Chip8.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\C++\repos\CHIP-8\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdl3.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdl3.cpp.obj -MF CMakeFiles\Chip8.dir\thirdparty\imgui_docking\backends\imgui_impl_sdl3.cpp.obj.d -o CMakeFiles\Chip8.dir\thirdparty\imgui_docking\backends\imgui_impl_sdl3.cpp.obj -c D:\Workspace\C++\repos\CHIP-8\thirdparty\imgui_docking\backends\imgui_impl_sdl3.cpp
+
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdl3.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdl3.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Workspace\C++\repos\CHIP-8\thirdparty\imgui_docking\backends\imgui_impl_sdl3.cpp > CMakeFiles\Chip8.dir\thirdparty\imgui_docking\backends\imgui_impl_sdl3.cpp.i
+
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdl3.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdl3.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Workspace\C++\repos\CHIP-8\thirdparty\imgui_docking\backends\imgui_impl_sdl3.cpp -o CMakeFiles\Chip8.dir\thirdparty\imgui_docking\backends\imgui_impl_sdl3.cpp.s
+
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.cpp.obj: CMakeFiles/Chip8.dir/flags.make
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.cpp.obj: CMakeFiles/Chip8.dir/includes_CXX.rsp
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.cpp.obj: D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.cpp
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.cpp.obj: CMakeFiles/Chip8.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\C++\repos\CHIP-8\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.cpp.obj -MF CMakeFiles\Chip8.dir\thirdparty\imgui_docking\backends\imgui_impl_sdlrenderer3.cpp.obj.d -o CMakeFiles\Chip8.dir\thirdparty\imgui_docking\backends\imgui_impl_sdlrenderer3.cpp.obj -c D:\Workspace\C++\repos\CHIP-8\thirdparty\imgui_docking\backends\imgui_impl_sdlrenderer3.cpp
+
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Workspace\C++\repos\CHIP-8\thirdparty\imgui_docking\backends\imgui_impl_sdlrenderer3.cpp > CMakeFiles\Chip8.dir\thirdparty\imgui_docking\backends\imgui_impl_sdlrenderer3.cpp.i
+
+CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Workspace\C++\repos\CHIP-8\thirdparty\imgui_docking\backends\imgui_impl_sdlrenderer3.cpp -o CMakeFiles\Chip8.dir\thirdparty\imgui_docking\backends\imgui_impl_sdlrenderer3.cpp.s
+
 # Object files for target Chip8
 Chip8_OBJECTS = \
 "CMakeFiles/Chip8.dir/emulator.cpp.obj" \
 "CMakeFiles/Chip8.dir/Chip8.cpp.obj" \
 "CMakeFiles/Chip8.dir/Platform.cpp.obj" \
-"CMakeFiles/Chip8.dir/MyGui.cpp.obj"
+"CMakeFiles/Chip8.dir/MyGui.cpp.obj" \
+"CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui.cpp.obj" \
+"CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_draw.cpp.obj" \
+"CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_widgets.cpp.obj" \
+"CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_tables.cpp.obj" \
+"CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_demo.cpp.obj" \
+"CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdl3.cpp.obj" \
+"CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.cpp.obj"
 
 # External object files for target Chip8
 Chip8_EXTERNAL_OBJECTS =
@@ -145,13 +257,20 @@ Chip8.exe: CMakeFiles/Chip8.dir/emulator.cpp.obj
 Chip8.exe: CMakeFiles/Chip8.dir/Chip8.cpp.obj
 Chip8.exe: CMakeFiles/Chip8.dir/Platform.cpp.obj
 Chip8.exe: CMakeFiles/Chip8.dir/MyGui.cpp.obj
+Chip8.exe: CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui.cpp.obj
+Chip8.exe: CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_draw.cpp.obj
+Chip8.exe: CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_widgets.cpp.obj
+Chip8.exe: CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_tables.cpp.obj
+Chip8.exe: CMakeFiles/Chip8.dir/thirdparty/imgui_docking/imgui_demo.cpp.obj
+Chip8.exe: CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdl3.cpp.obj
+Chip8.exe: CMakeFiles/Chip8.dir/thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.cpp.obj
 Chip8.exe: CMakeFiles/Chip8.dir/build.make
 Chip8.exe: thirdparty/SDL/libSDL3.dll.a
 Chip8.exe: D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/src/dynapi/SDL_dynapi.sym
 Chip8.exe: CMakeFiles/Chip8.dir/linkLibs.rsp
 Chip8.exe: CMakeFiles/Chip8.dir/objects1.rsp
 Chip8.exe: CMakeFiles/Chip8.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\Workspace\C++\repos\CHIP-8\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Chip8.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\Workspace\C++\repos\CHIP-8\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable Chip8.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Chip8.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
