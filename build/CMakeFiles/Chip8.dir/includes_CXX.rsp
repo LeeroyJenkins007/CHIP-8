@@ -1,1 +1,1 @@
--I"D:/Workspace/C++/repos/CHIP-8/build/thirdparty/SDL/include-revision" -I"D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include"
+-I"D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking" -I"D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/backends" -I"D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL" -I"D:/Workspace/C++/repos/CHIP-8/build/thirdparty/SDL/include-revision" -I"D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include"

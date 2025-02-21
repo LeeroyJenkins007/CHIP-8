@@ -5,6 +5,7 @@
 
 #include "Chip8.h"
 #include "Platform.h"
+#include "MyGui.h"
 
 using namespace std;
 
@@ -14,13 +15,14 @@ Chip8 myChip8;
 //const char ROM[] = "../roms/2-ibm-logo.ch8";
 //const char  ROM[] = "../roms/3-corax+.ch8";
 //const char  ROM[] = "../roms/4-flags.ch8";
-//const char  ROM[] = "../roms/5-quirks.ch8";
-const char  ROM[] = "../roms/6-keypad.ch8";
+const char  ROM[] = "../roms/5-quirks.ch8";
+//const char  ROM[] = "../roms/6-keypad.ch8";
 //const char  ROM[] = "../roms/7-beep.ch8";
 //const char  ROM[] = "../roms/8-scrolling.ch8";
 //const char ROM[] = "../roms/test_opcode.ch8";
 //const char ROM[] = "../roms/cavern.ch8";
 //const char ROM[] = "../roms/delay_timer_test.ch8";
+//const char ROM[] = "../roms/pong.rom";
 
 
 int main(){
@@ -31,11 +33,13 @@ int main(){
 
     Platform platform("CHIP-8 Emulator", PXL_WIDTH * 10, PXL_HEIGHT * 10, PXL_WIDTH, PXL_HEIGHT);
 
+    MyGui MyGui(platform.window, platform.renderer);
 
     myChip8.initialize();
 
     myChip8.loadGame(ROM);
     
+    //ImGui::ShowDemoWindow();
 
     //string input;
     bool quit = false;
@@ -45,19 +49,29 @@ int main(){
     auto fps_t = t0; 
     auto fps_prev = fps_t;
     int fps_count = 0;
+    int ipf = 0;
+
+    uint8_t instruction_threshold = 11;
     while(!quit){
         //SDL_Event event;
         //runs through all events, doesn't get limited by frame rate
-        quit = platform.ProcessInput(myChip8.keypad);
+        if(ipf <= instruction_threshold){
+            quit = platform.ProcessInput(myChip8.keypad);
 
-        myChip8.emulateCycle();
+            //ImGui_ImplSDL3_ProcessEvent(&event);
+
+            myChip8.emulateCycle();
+            ipf++;
+        }
 
         auto t1 = chrono::steady_clock::now();
         auto frame_delta_t = chrono::duration_cast<chrono::milliseconds>(t1 - t0).count();
         
         //cout << "Frame Time: " << frame_delta_t << "ms\n";
-
+        
         if(frame_delta_t >= frame_time_ms){ 
+            std::cout << ipf << "\n";
+            ipf = 0;
             fps_count++;
             //cout << fps_count << "\n";
             if(myChip8.drawFlag){
@@ -89,6 +103,7 @@ int main(){
 
 
     platform.destroy();
+    MyGui.destroy();
     
     return 0;
 }

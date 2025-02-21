@@ -154,6 +154,116 @@ CMakeFiles/Chip8.dir/Chip8.cpp.obj: D:/Workspace/C++/repos/CHIP-8/Chip8.cpp \
   C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/syslimits.h \
   D:/Workspace/C++/repos/CHIP-8/Chip8.h
 
+CMakeFiles/Chip8.dir/MyGui.cpp.obj: D:/Workspace/C++/repos/CHIP-8/MyGui.cpp \
+  C:/msys64/ucrt64/include/_mingw.h \
+  C:/msys64/ucrt64/include/_mingw_mac.h \
+  C:/msys64/ucrt64/include/_mingw_off_t.h \
+  C:/msys64/ucrt64/include/_mingw_secapi.h \
+  C:/msys64/ucrt64/include/_mingw_stat64.h \
+  C:/msys64/ucrt64/include/_mingw_stdarg.h \
+  C:/msys64/ucrt64/include/assert.h \
+  C:/msys64/ucrt64/include/c++/13.1.0/bits/std_abs.h \
+  C:/msys64/ucrt64/include/c++/13.1.0/cstdlib \
+  C:/msys64/ucrt64/include/c++/13.1.0/pstl/pstl_config.h \
+  C:/msys64/ucrt64/include/c++/13.1.0/stdlib.h \
+  C:/msys64/ucrt64/include/c++/13.1.0/x86_64-w64-mingw32/bits/c++config.h \
+  C:/msys64/ucrt64/include/c++/13.1.0/x86_64-w64-mingw32/bits/cpu_defines.h \
+  C:/msys64/ucrt64/include/c++/13.1.0/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/msys64/ucrt64/include/corecrt.h \
+  C:/msys64/ucrt64/include/corecrt_startup.h \
+  C:/msys64/ucrt64/include/corecrt_stdio_config.h \
+  C:/msys64/ucrt64/include/corecrt_wstdlib.h \
+  C:/msys64/ucrt64/include/crtdefs.h \
+  C:/msys64/ucrt64/include/errno.h \
+  C:/msys64/ucrt64/include/float.h \
+  C:/msys64/ucrt64/include/limits.h \
+  C:/msys64/ucrt64/include/malloc.h \
+  C:/msys64/ucrt64/include/process.h \
+  C:/msys64/ucrt64/include/sdks/_mingw_ddk.h \
+  C:/msys64/ucrt64/include/sec_api/stdlib_s.h \
+  C:/msys64/ucrt64/include/sec_api/string_s.h \
+  C:/msys64/ucrt64/include/sec_api/wchar_s.h \
+  C:/msys64/ucrt64/include/stdarg.h \
+  C:/msys64/ucrt64/include/stddef.h \
+  C:/msys64/ucrt64/include/stdint.h \
+  C:/msys64/ucrt64/include/stdlib.h \
+  C:/msys64/ucrt64/include/string.h \
+  C:/msys64/ucrt64/include/swprintf.inl \
+  C:/msys64/ucrt64/include/sys/types.h \
+  C:/msys64/ucrt64/include/vadefs.h \
+  C:/msys64/ucrt64/include/wchar.h \
+  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/float.h \
+  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h \
+  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h \
+  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdarg.h \
+  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h \
+  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h \
+  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/syslimits.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_assert.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_asyncio.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_atomic.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_audio.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_begin_code.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_bits.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_blendmode.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_camera.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_clipboard.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_close_code.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_cpuinfo.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_dialog.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_endian.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_error.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_events.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_filesystem.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_gamepad.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_gpu.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_guid.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_haptic.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_hidapi.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_hints.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_init.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_iostream.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_joystick.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_keyboard.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_keycode.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_loadso.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_locale.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_log.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_messagebox.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_metal.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_misc.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_mouse.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_mutex.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_oldnames.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_pen.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_pixels.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_platform.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_platform_defines.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_power.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_process.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_properties.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_rect.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_render.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_scancode.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_sensor.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_stdinc.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_storage.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_surface.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_system.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_thread.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_time.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_timer.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_touch.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_tray.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_version.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_video.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/backends/imgui_impl_sdl3.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/imconfig.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/imgui.h \
+  D:/Workspace/C++/repos/CHIP-8/MyGui.h
+
 CMakeFiles/Chip8.dir/Platform.cpp.obj: D:/Workspace/C++/repos/CHIP-8/Platform.cpp \
   C:/msys64/ucrt64/include/_mingw.h \
   C:/msys64/ucrt64/include/_mingw_mac.h \
@@ -373,6 +483,7 @@ CMakeFiles/Chip8.dir/emulator.cpp.obj: D:/Workspace/C++/repos/CHIP-8/emulator.cp
   C:/msys64/ucrt64/include/_mingw_stat64.h \
   C:/msys64/ucrt64/include/_mingw_stdarg.h \
   C:/msys64/ucrt64/include/_timeval.h \
+  C:/msys64/ucrt64/include/assert.h \
   C:/msys64/ucrt64/include/c++/13.1.0/backward/binders.h \
   C:/msys64/ucrt64/include/c++/13.1.0/bit \
   C:/msys64/ucrt64/include/c++/13.1.0/bits/alloc_traits.h \
@@ -491,6 +602,7 @@ CMakeFiles/Chip8.dir/emulator.cpp.obj: D:/Workspace/C++/repos/CHIP-8/emulator.cp
   C:/msys64/ucrt64/include/crtdefs.h \
   C:/msys64/ucrt64/include/ctype.h \
   C:/msys64/ucrt64/include/errno.h \
+  C:/msys64/ucrt64/include/float.h \
   C:/msys64/ucrt64/include/limits.h \
   C:/msys64/ucrt64/include/locale.h \
   C:/msys64/ucrt64/include/malloc.h \
@@ -520,6 +632,7 @@ CMakeFiles/Chip8.dir/emulator.cpp.obj: D:/Workspace/C++/repos/CHIP-8/emulator.cp
   C:/msys64/ucrt64/include/vadefs.h \
   C:/msys64/ucrt64/include/wchar.h \
   C:/msys64/ucrt64/include/wctype.h \
+  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/float.h \
   C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h \
   C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h \
   C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdarg.h \
@@ -585,7 +698,12 @@ CMakeFiles/Chip8.dir/emulator.cpp.obj: D:/Workspace/C++/repos/CHIP-8/emulator.cp
   D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_tray.h \
   D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_version.h \
   D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_video.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/backends/imgui_impl_sdl3.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/imconfig.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/imgui.h \
   D:/Workspace/C++/repos/CHIP-8/Chip8.h \
+  D:/Workspace/C++/repos/CHIP-8/MyGui.h \
   D:/Workspace/C++/repos/CHIP-8/Platform.h
 
 
@@ -919,6 +1037,8 @@ C:/msys64/ucrt64/include/wctype.h:
 
 C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h:
 
+D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/imgui.h:
+
 C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h:
 
 C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h:
@@ -933,13 +1053,21 @@ C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/syslimits.h:
 
 D:/Workspace/C++/repos/CHIP-8/Chip8.h:
 
-D:/Workspace/C++/repos/CHIP-8/Platform.cpp:
+D:/Workspace/C++/repos/CHIP-8/MyGui.cpp:
+
+C:/msys64/ucrt64/include/assert.h:
+
+C:/msys64/ucrt64/include/float.h:
 
 C:/msys64/ucrt64/include/sec_api/string_s.h:
 
 C:/msys64/ucrt64/include/stdarg.h:
 
 C:/msys64/ucrt64/include/string.h:
+
+D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_misc.h:
+
+C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/float.h:
 
 D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_asyncio.h:
 
@@ -997,8 +1125,6 @@ D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_messagebox.h:
 
 D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_metal.h:
 
-D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_misc.h:
-
 D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_mouse.h:
 
 D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_oldnames.h:
@@ -1030,6 +1156,16 @@ D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_thread.h:
 D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_time.h:
 
 D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_tray.h:
+
+D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/backends/imgui_impl_sdl3.h:
+
+D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.h:
+
+D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/imconfig.h:
+
+D:/Workspace/C++/repos/CHIP-8/MyGui.h:
+
+D:/Workspace/C++/repos/CHIP-8/Platform.cpp:
 
 C:/msys64/ucrt64/include/c++/13.1.0/bits/chrono.h:
 

@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/Workspace/C++/repos/CHIP-8/Chip8.cpp" "CMakeFiles/Chip8.dir/Chip8.cpp.obj" "gcc" "CMakeFiles/Chip8.dir/Chip8.cpp.obj.d"
+  "D:/Workspace/C++/repos/CHIP-8/MyGui.cpp" "CMakeFiles/Chip8.dir/MyGui.cpp.obj" "gcc" "CMakeFiles/Chip8.dir/MyGui.cpp.obj.d"
   "D:/Workspace/C++/repos/CHIP-8/Platform.cpp" "CMakeFiles/Chip8.dir/Platform.cpp.obj" "gcc" "CMakeFiles/Chip8.dir/Platform.cpp.obj.d"
   "D:/Workspace/C++/repos/CHIP-8/emulator.cpp" "CMakeFiles/Chip8.dir/emulator.cpp.obj" "gcc" "CMakeFiles/Chip8.dir/emulator.cpp.obj.d"
   )

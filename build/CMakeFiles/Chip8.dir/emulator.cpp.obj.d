@@ -212,4 +212,11 @@ CMakeFiles/Chip8.dir/emulator.cpp.obj: \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_timer.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_tray.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_version.h \
- D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_oldnames.h
+ D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_oldnames.h \
+ D:\Workspace\C++\repos\CHIP-8\MyGui.h \
+ D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/imgui.h \
+ D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/imconfig.h \
+ C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/float.h \
+ C:/msys64/ucrt64/include/float.h C:/msys64/ucrt64/include/assert.h \
+ D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/backends/imgui_impl_sdl3.h \
+ D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.h

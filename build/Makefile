@@ -191,6 +191,30 @@ Chip8.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/Chip8.cpp.s
 .PHONY : Chip8.cpp.s
 
+MyGui.obj: MyGui.cpp.obj
+.PHONY : MyGui.obj
+
+# target to build an object file
+MyGui.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/MyGui.cpp.obj
+.PHONY : MyGui.cpp.obj
+
+MyGui.i: MyGui.cpp.i
+.PHONY : MyGui.i
+
+# target to preprocess a source file
+MyGui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/MyGui.cpp.i
+.PHONY : MyGui.cpp.i
+
+MyGui.s: MyGui.cpp.s
+.PHONY : MyGui.s
+
+# target to generate assembly for a file
+MyGui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Chip8.dir\build.make CMakeFiles/Chip8.dir/MyGui.cpp.s
+.PHONY : MyGui.cpp.s
+
 Platform.obj: Platform.cpp.obj
 .PHONY : Platform.obj
 
@@ -254,6 +278,9 @@ help:
 	@echo ... Chip8.obj
 	@echo ... Chip8.i
 	@echo ... Chip8.s
+	@echo ... MyGui.obj
+	@echo ... MyGui.i
+	@echo ... MyGui.s
 	@echo ... Platform.obj
 	@echo ... Platform.i
 	@echo ... Platform.s
