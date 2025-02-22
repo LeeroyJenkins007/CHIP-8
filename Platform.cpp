@@ -3,46 +3,52 @@
 
 #include "Platform.h"
 
+Platform::Platform(){}
+
 Platform::Platform(const char* title, int windowWidth, int windowHeight, int textureWidth, int textureHeight){
     if(!SDL_InitSubSystem(SDL_INIT_VIDEO)){
-                SDL_LogCritical(SDL_LOG_CATEGORY_VIDEO, SDL_GetError());
-            }
+        SDL_LogCritical(SDL_LOG_CATEGORY_VIDEO, SDL_GetError());
+    }
 
-            //create SDL3 window
-            window = SDL_CreateWindow("CHIP-8 Emulator", windowWidth, windowHeight, SDL_WINDOW_RESIZABLE);
-            if(!window){
-                SDL_LogCritical(SDL_LOG_CATEGORY_VIDEO, SDL_GetError());
-            }else{
-                std::cout << "Window Created\n";
-            }
+    //create SDL3 window
+    window = SDL_CreateWindow("CHIP-8 Emulator", windowWidth, windowHeight, SDL_WINDOW_RESIZABLE);
+    if(!window){
+        SDL_LogCritical(SDL_LOG_CATEGORY_VIDEO, SDL_GetError());
+    }else{
+        std::cout << "Window Created\n";
+    }
 
-            //create SDL3 renderer
-            renderer = SDL_CreateRenderer(window, NULL);
-            if(!renderer){
-                SDL_LogCritical(SDL_LOG_CATEGORY_RENDER, SDL_GetError());
-            }else{
-                std::cout << "Renderer Created\n";
-            }
+    //create SDL3 renderer
+    renderer = SDL_CreateRenderer(window, NULL);
+    if(!renderer){
+        SDL_LogCritical(SDL_LOG_CATEGORY_RENDER, SDL_GetError());
+    }else{
+        std::cout << "Renderer Created\n";
+    }
 
-            //create SDL3 texture
-            screenTexture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING, textureWidth, textureHeight);
-            SDL_SetTextureScaleMode(screenTexture, SDL_SCALEMODE_NEAREST);
+    SDL_SetRenderVSync(renderer, 1);
+    //create SDL3 texture
+    screenTexture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING, textureWidth, textureHeight);
+    SDL_SetTextureScaleMode(screenTexture, SDL_SCALEMODE_NEAREST);
+
+    SDL_ShowWindow(window);
 }
 
-void Platform::Update(const void* pixels, int pitch){
+void Platform::Render(const void* pixels, int pitch){
 
             SDL_UpdateTexture(screenTexture, NULL, pixels, pitch);
-            SDL_RenderClear(renderer);
+            //SDL_RenderClear(renderer);
             SDL_RenderTexture(renderer, screenTexture, NULL, NULL);
             SDL_RenderPresent(renderer);
 }
 
-bool Platform::ProcessInput(uint8_t* keypad){
+bool Platform::ProcessInput(uint8_t* keypad, SDL_Event event){
     bool quit = false;
 
-    SDL_Event event;
+    //SDL_Event event;
 
-    while (SDL_PollEvent(&event)){
+    //while (SDL_PollEvent(&event)){
+
         switch(event.type){
             case SDL_EVENT_QUIT:
                 quit = true;
@@ -169,7 +175,7 @@ bool Platform::ProcessInput(uint8_t* keypad){
                 //std::cout << "unknown event type\n";
                 break;
         }//Switch EVENT TYPE
-    } //while Poll events
+    //} //while Poll events
     return quit;
 }
 

@@ -35,6 +35,7 @@ CMakeFiles/Chip8.dir/MyGui.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.1.0/bits/std_abs.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/backends/imgui_impl_sdl3.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.h \
+ D:\Workspace\C++\repos\CHIP-8\Platform.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_stdinc.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_platform_defines.h \

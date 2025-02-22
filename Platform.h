@@ -5,15 +5,16 @@
 
 class Platform {
     public:
-        SDL_Window *window;
-        SDL_Renderer *renderer;
-        SDL_Texture *screenTexture;
+        SDL_Window *window = nullptr;
+        SDL_Renderer *renderer = nullptr;
+        SDL_Texture *screenTexture = nullptr;
 
     public:
+        Platform();
         Platform(const char*, int, int, int, int);
-        void Update(const void*, int);
+        void Render(const void*, int);
         void destroy();
-        bool ProcessInput(uint8_t*);
+        bool ProcessInput(uint8_t*, SDL_Event);
 };
 
 #endif

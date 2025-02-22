@@ -1,10 +1,9 @@
 #include <iostream>
 #include <chrono>
 #include <thread>
-//#include <SDL3/SDL.h>
 
 #include "Chip8.h"
-#include "Platform.h"
+//#include "Platform.h"
 #include "MyGui.h"
 
 using namespace std;
@@ -15,8 +14,8 @@ Chip8 myChip8;
 //const char ROM[] = "../roms/2-ibm-logo.ch8";
 //const char  ROM[] = "../roms/3-corax+.ch8";
 //const char  ROM[] = "../roms/4-flags.ch8";
-const char  ROM[] = "../roms/5-quirks.ch8";
-//const char  ROM[] = "../roms/6-keypad.ch8";
+//const char  ROM[] = "../roms/5-quirks.ch8";
+const char  ROM[] = "../roms/6-keypad.ch8";
 //const char  ROM[] = "../roms/7-beep.ch8";
 //const char  ROM[] = "../roms/8-scrolling.ch8";
 //const char ROM[] = "../roms/test_opcode.ch8";
@@ -31,9 +30,16 @@ int main(){
 
     uint32_t pixels[PXL_HEIGHT * PXL_WIDTH];
 
-    Platform platform("CHIP-8 Emulator", PXL_WIDTH * 10, PXL_HEIGHT * 10, PXL_WIDTH, PXL_HEIGHT);
+    //Platform platform("CHIP-8 Emulator", PXL_WIDTH * 10, PXL_HEIGHT * 10, PXL_WIDTH, PXL_HEIGHT);
 
-    MyGui MyGui(platform.window, platform.renderer);
+    static GraphicalInterface graphicsData;
+    graphicsData.windowWidth = PXL_WIDTH * 10;
+    graphicsData.windowHeight = PXL_HEIGHT * 10;
+    graphicsData.pxlWidth = PXL_WIDTH;
+    graphicsData.pxlHeight = PXL_HEIGHT;
+    graphicsData.windowName = "CHIP-8 Emulator";
+
+    MyGui myGui(&graphicsData);
 
     myChip8.initialize();
 
@@ -51,12 +57,13 @@ int main(){
     int fps_count = 0;
     int ipf = 0;
 
-    uint8_t instruction_threshold = 11;
+    uint8_t instruction_threshold = 16;
     while(!quit){
         //SDL_Event event;
         //runs through all events, doesn't get limited by frame rate
         if(ipf <= instruction_threshold){
-            quit = platform.ProcessInput(myChip8.keypad);
+            quit = myGui.ProcessEvent(myChip8.keypad);
+            //quit = platform.ProcessInput(myChip8.keypad);
 
             //ImGui_ImplSDL3_ProcessEvent(&event);
 
@@ -70,7 +77,7 @@ int main(){
         //cout << "Frame Time: " << frame_delta_t << "ms\n";
         
         if(frame_delta_t >= frame_time_ms){ 
-            std::cout << ipf << "\n";
+            //std::cout << ipf << "\n";
             ipf = 0;
             fps_count++;
             //cout << fps_count << "\n";
@@ -84,8 +91,10 @@ int main(){
                     pixels[i] = (0x00FFFFFF * pixel) | 0xFF000000;
                 }
                 //Rendering code
-                platform.Update(pixels, PXL_WIDTH * sizeof(uint32_t));
+                //myGui.Update(pixels, PXL_WIDTH * sizeof(uint32_t));
+                //platform.Update(pixels, PXL_WIDTH * sizeof(uint32_t));
             }
+            myGui.Update(pixels, PXL_WIDTH * sizeof(uint32_t));
             t0 = chrono::steady_clock::now();
         }
 
@@ -102,8 +111,8 @@ int main(){
     }
 
 
-    platform.destroy();
-    MyGui.destroy();
+    
+    myGui.destroy();
     
     return 0;
 }
