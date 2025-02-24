@@ -1,6 +1,8 @@
-To display an SDL3 window inside another window (for example, to render an SDL3 window in a Dear ImGui window), you would need to handle both SDL3 and ImGui's windowing and rendering operations. However, you cannot directly "embed" one window into another (like you would with a child window in a typical GUI framework) without specific workarounds. 
+To display an SDL3 window inside another window (for example, to render an SDL3 window in a Dear ImGui window), you would need to handle both SDL3 and ImGui's 
+windowing and rendering operations. However, you cannot directly "embed" one window into another (like you would with a child window in a typical GUI framework) without specific workarounds. 
 
-What you're likely referring to is embedding the SDL3-rendered content within an ImGui window, where SDL3 is used to render the graphics in a specific area of an ImGui window. This can be done by rendering to a texture and then using that texture as an image inside the ImGui window.
+What you're likely referring to is embedding the SDL3-rendered content within an ImGui window, where SDL3 is used to render the graphics in a specific area of an ImGui window. 
+This can be done by rendering to a texture and then using that texture as an image inside the ImGui window.
 
 Here’s a step-by-step guide to achieve this:
 

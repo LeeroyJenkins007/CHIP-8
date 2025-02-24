@@ -20,8 +20,10 @@ struct GraphicalInterface {
 class MyGui {
     private:
         ImGuiIO io;
+        ImTextureID textureID;
     public:
         Platform platform;
+        GraphicalInterface graphicsData;
     public:
         MyGui(GraphicalInterface*);
         void destroy();

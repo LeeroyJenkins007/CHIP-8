@@ -7,10 +7,12 @@ ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
 MyGui::MyGui(GraphicalInterface* graphicsData){
 
+    this->graphicsData = *graphicsData;
+
     //Initialize the SDL Platform
     platform = Platform(graphicsData->windowName, graphicsData->windowWidth, graphicsData->windowHeight, graphicsData->pxlWidth, graphicsData->pxlHeight);
 
-
+    textureID = (ImTextureID)platform.screenTexture;
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
 
@@ -84,7 +86,16 @@ void MyGui::Update(const void* pixels, int pitch){
         ImGui::End();
     }
 
-    
+
+    ImGui::Begin("Emulator");
+
+    SDL_UpdateTexture(platform.screenTexture, NULL, pixels, pitch);
+
+    ImGui::Image(textureID, ImVec2(graphicsData.pxlWidth, graphicsData.pxlHeight));
+    ImGui::End();
+
+
+    //platform.Render(pixels, pitch);
 
     ImGui::Render();
 
@@ -95,7 +106,7 @@ void MyGui::Update(const void* pixels, int pitch){
 
     SDL_RenderPresent(platform.renderer);
 
-    platform.Render(pixels, pitch);
+    
     /*
     {
         ImGui::Begin("Chip8 Emulator");
