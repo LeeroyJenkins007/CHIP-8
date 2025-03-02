@@ -33,8 +33,8 @@ int main(){
     //Platform platform("CHIP-8 Emulator", PXL_WIDTH * 10, PXL_HEIGHT * 10, PXL_WIDTH, PXL_HEIGHT);
 
     static GraphicalInterface graphicsData;
-    graphicsData.windowWidth = PXL_WIDTH * 10;
-    graphicsData.windowHeight = PXL_HEIGHT * 10;
+    graphicsData.windowWidth = 1920;
+    graphicsData.windowHeight = 1080;
     graphicsData.pxlWidth = PXL_WIDTH;
     graphicsData.pxlHeight = PXL_HEIGHT;
     graphicsData.windowName = "CHIP-8 Emulator";

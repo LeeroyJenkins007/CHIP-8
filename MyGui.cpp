@@ -91,7 +91,7 @@ void MyGui::Update(const void* pixels, int pitch){
 
     SDL_UpdateTexture(platform.screenTexture, NULL, pixels, pitch);
 
-    ImGui::Image(textureID, ImVec2(graphicsData.pxlWidth, graphicsData.pxlHeight));
+    ImGui::Image(textureID, ImVec2(graphicsData.windowWidth, graphicsData.windowHeight));
     ImGui::End();
 
 
@@ -106,19 +106,6 @@ void MyGui::Update(const void* pixels, int pitch){
 
     SDL_RenderPresent(platform.renderer);
 
-    
-    /*
-    {
-        ImGui::Begin("Chip8 Emulator");
-        //platform.Render(pixels, pitch);
-
-        SDL_UpdateTexture(platform.screenTexture, NULL, pixels, pitch);
-            //SDL_RenderClear(renderer);
-        SDL_RenderTexture(platform.renderer, platform.screenTexture, NULL, NULL);
-        SDL_RenderPresent(platform.renderer);
-        ImGui::End();
-    }
-        */
     
 }
 
