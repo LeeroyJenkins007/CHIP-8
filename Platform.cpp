@@ -11,27 +11,42 @@ Platform::Platform(const char* title, int windowWidth, int windowHeight, int tex
     }
 
     //create SDL3 window
-    window = SDL_CreateWindow("CHIP-8 Emulator", windowWidth, windowHeight, SDL_WINDOW_RESIZABLE);
-    if(!window){
+    mainWindow = SDL_CreateWindow("Emulator", windowWidth, windowHeight, SDL_WINDOW_RESIZABLE);
+    if(!mainWindow){
         SDL_LogCritical(SDL_LOG_CATEGORY_VIDEO, SDL_GetError());
     }else{
-        std::cout << "Window Created\n";
+        std::cout << "Main Window Created\n";
     }
 
+    //emulatorWindow = SDL_CreateWindow("CHIP-8", textureHeight, textureWidth, SDL_WINDOW_RESIZABLE);
+    //if(!emulatorWindow){
+    //    SDL_LogCritical(SDL_LOG_CATEGORY_VIDEO, SDL_GetError());
+    //}else{
+    //    std::cout << "Emulator Window Created\n";
+    //}
+
     //create SDL3 renderer
-    renderer = SDL_CreateRenderer(window, NULL);
+    renderer = SDL_CreateRenderer(mainWindow, NULL);
     if(!renderer){
         SDL_LogCritical(SDL_LOG_CATEGORY_RENDER, SDL_GetError());
     }else{
         std::cout << "Renderer Created\n";
     }
 
+    //emuRenderer = SDL_CreateRenderer(emulatorWindow, NULL);
+    //if(!emuRenderer){
+    //    SDL_LogCritical(SDL_LOG_CATEGORY_RENDER, SDL_GetError());
+    //}else{
+    //    std::cout << "Emulator Renderer Created\n";
+    //}
+
     SDL_SetRenderVSync(renderer, 1);
     //create SDL3 texture
     screenTexture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING, textureWidth, textureHeight);
+    //screenTexture = SDL_CreateTexture(emuRenderer, SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING, textureWidth, textureHeight);
     SDL_SetTextureScaleMode(screenTexture, SDL_SCALEMODE_NEAREST);
 
-    SDL_ShowWindow(window);
+    SDL_ShowWindow(mainWindow);
 }
 
 void Platform::Render(const void* pixels, int pitch){
@@ -182,6 +197,9 @@ bool Platform::ProcessInput(uint8_t* keypad, SDL_Event event){
 void Platform::destroy(){
     SDL_DestroyTexture(screenTexture);
     SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
+    SDL_DestroyRenderer(emuRenderer);
+    SDL_DestroyWindow(mainWindow);
+    SDL_DestroyWindow(emulatorWindow);
     SDL_QuitSubSystem(SDL_INIT_VIDEO);
+    SDL_Quit();
 }

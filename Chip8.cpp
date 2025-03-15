@@ -226,6 +226,7 @@ void Chip8::emulateCycle(){
             gp_reg[nib[1]] = (std::rand() % (2^8 - 1)) & ((nib[2]<<4) | nib[3]);
             break;
         case 0xD:{
+            //DXYN
             //sprite vx,vy,n
             //std::cout << "opcode D\n";
             //std::cout << "Draw to Screen: \n";
@@ -302,6 +303,7 @@ void Chip8::emulateCycle(){
                                 change = true;
                             }
                         }
+                        
                         if (!change)
                             pc -= 2;
                     }

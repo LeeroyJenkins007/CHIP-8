@@ -5,8 +5,10 @@
 
 class Platform {
     public:
-        SDL_Window *window = nullptr;
+        SDL_Window *mainWindow = nullptr;
+        SDL_Window *emulatorWindow = nullptr;
         SDL_Renderer *renderer = nullptr;
+        SDL_Renderer *emuRenderer = nullptr;
         SDL_Texture *screenTexture = nullptr;
 
     public:

@@ -1,0 +1,139 @@
+To create a separate window for your emulator using ImGui with SDL3, you’ll need to create a separate SDL window and use ImGui to render into that window. Below are the steps to do this:
+
+### Step 1: Initialize SDL3 and ImGui
+
+Before setting up a separate window, you’ll need to initialize SDL3 and ImGui for the main application window. This part is the same as you would normally do.
+
+1. Initialize SDL3 and create your primary window.
+2. Initialize ImGui and set it up to render in the primary window.
+
+```cpp
+#include <SDL.h>
+#include <imgui.h>
+#include <backends/imgui_impl_sdl3.h>
+#include <backends/imgui_impl_opengl3.h> // Or Vulkan if you're using Vulkan
+
+// Initialize SDL
+if (SDL_Init(SDL_INIT_VIDEO) != 0) {
+    printf("SDL_Init Error: %s\n", SDL_GetError());
+    return 1;
+}
+
+// Create SDL window (main window)
+SDL_Window* mainWindow = SDL_CreateWindow("Main Window", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720, SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN);
+if (!mainWindow) {
+    printf("SDL_CreateWindow Error: %s\n", SDL_GetError());
+    return 1;
+}
+
+// Create SDL renderer (or OpenGL context)
+SDL_Renderer* renderer = SDL_CreateRenderer(mainWindow, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+if (!renderer) {
+    printf("SDL_CreateRenderer Error: %s\n", SDL_GetError());
+    return 1;
+}
+
+// Setup OpenGL or Vulkan context for ImGui
+// Setup ImGui bindings here
+ImGui::CreateContext();
+ImGui_ImplSDL3_InitForOpenGL(mainWindow, SDL_GL_GetCurrentContext());
+ImGui_ImplOpenGL3_Init("#version 130"); // Use appropriate shader version
+```
+
+### Step 2: Create a Separate SDL Window for Emulator
+
+Next, you can create a separate SDL window for your emulator and render content separately in that window.
+
+```cpp
+// Create SDL window (emulator window)
+SDL_Window* emulatorWindow = SDL_CreateWindow("Emulator Window", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN);
+if (!emulatorWindow) {
+    printf("SDL_CreateWindow Error: %s\n", SDL_GetError());
+    return 1;
+}
+
+// Create SDL renderer (or OpenGL context) for the emulator window
+SDL_Renderer* emulatorRenderer = SDL_CreateRenderer(emulatorWindow, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+if (!emulatorRenderer) {
+    printf("SDL_CreateRenderer Error: %s\n", SDL_GetError());
+    return 1;
+}
+
+// Set up ImGui to use the emulator window
+ImGui_ImplSDL3_InitForOpenGL(emulatorWindow, SDL_GL_GetCurrentContext());
+```
+
+### Step 3: Handle Rendering for Both Windows
+
+Now, in your main loop, you need to handle events, rendering, and ImGui drawing for both the main window and the emulator window.
+
+```cpp
+SDL_Event event;
+bool running = true;
+
+while (running) {
+    while (SDL_PollEvent(&event)) {
+        if (event.type == SDL_QUIT) {
+            running = false;
+        }
+    }
+
+    // Rendering for main window
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+    SDL_RenderClear(renderer);
+
+    // Start ImGui frame for main window
+    ImGui_ImplSDL3_NewFrame(mainWindow);
+    ImGui::NewFrame();
+
+    ImGui::Text("Main Window");
+    ImGui::Render();
+
+    // Render ImGui for the main window
+    SDL_GL_MakeCurrent(mainWindow, SDL_GL_GetCurrentContext());
+    ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+    SDL_RenderPresent(renderer);
+
+    // Rendering for emulator window
+    SDL_SetRenderDrawColor(emulatorRenderer, 0, 0, 0, 255);
+    SDL_RenderClear(emulatorRenderer);
+
+    // Start ImGui frame for emulator window
+    ImGui_ImplSDL3_NewFrame(emulatorWindow);
+    ImGui::NewFrame();
+
+    ImGui::Text("Emulator Window");
+    ImGui::Render();
+
+    // Render ImGui for the emulator window
+    SDL_GL_MakeCurrent(emulatorWindow, SDL_GL_GetCurrentContext());
+    ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+    SDL_RenderPresent(emulatorRenderer);
+}
+
+```
+
+### Step 4: Cleanup
+
+Once the loop is done, you should clean up your resources:
+
+```cpp
+// Cleanup ImGui
+ImGui_ImplOpenGL3_Shutdown();
+ImGui_ImplSDL3_Shutdown();
+ImGui::DestroyContext();
+
+// Cleanup SDL
+SDL_DestroyRenderer(emulatorRenderer);
+SDL_DestroyWindow(emulatorWindow);
+SDL_DestroyRenderer(renderer);
+SDL_DestroyWindow(mainWindow);
+SDL_Quit();
+```
+
+### Notes:
+- You can use OpenGL or Vulkan for rendering. Make sure to set up the proper context accordingly.
+- You may also need to set different rendering targets, like framebuffers, for both the main window and emulator window to make sure each has its own rendering context.
+- This approach creates two separate SDL windows that are managed independently, but both can render ImGui content.
+
+Let me know if you need further assistance!

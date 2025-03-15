@@ -11,11 +11,11 @@ using namespace std;
 Chip8 myChip8;
 
 //const char ROM[] = "../roms/chip8-logo.ch8";
-//const char ROM[] = "../roms/2-ibm-logo.ch8";
+const char ROM[] = "../roms/2-ibm-logo.ch8";
 //const char  ROM[] = "../roms/3-corax+.ch8";
 //const char  ROM[] = "../roms/4-flags.ch8";
 //const char  ROM[] = "../roms/5-quirks.ch8";
-const char  ROM[] = "../roms/6-keypad.ch8";
+//const char  ROM[] = "../roms/6-keypad.ch8";
 //const char  ROM[] = "../roms/7-beep.ch8";
 //const char  ROM[] = "../roms/8-scrolling.ch8";
 //const char ROM[] = "../roms/test_opcode.ch8";
@@ -35,6 +35,8 @@ int main(){
     static GraphicalInterface graphicsData;
     graphicsData.windowWidth = 1920;
     graphicsData.windowHeight = 1080;
+    graphicsData.emuWidth = PXL_WIDTH * 10;
+    graphicsData.emuHeight = PXL_HEIGHT * 10;
     graphicsData.pxlWidth = PXL_WIDTH;
     graphicsData.pxlHeight = PXL_HEIGHT;
     graphicsData.windowName = "CHIP-8 Emulator";

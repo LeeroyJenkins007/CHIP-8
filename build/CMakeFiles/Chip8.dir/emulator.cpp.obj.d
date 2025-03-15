@@ -161,6 +161,7 @@ CMakeFiles/Chip8.dir/emulator.cpp.obj: \
  C:/msys64/ucrt64/include/assert.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/backends/imgui_impl_sdl3.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.h \
+ D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/imgui_memory_editor.h \
  D:\Workspace\C++\repos\CHIP-8\Platform.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL.h \
  D:/Workspace/C++/repos/CHIP-8/thirdparty/SDL/include/SDL3/SDL_stdinc.h \
