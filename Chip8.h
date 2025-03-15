@@ -40,8 +40,7 @@ class Chip8 {
         uint16_t stack[STACK_SIZE];
         //stack pointer implementation
         uint8_t sp;
-        //RAM
-        uint8_t memory[MEMORY_SIZE];
+        
         //current opcode
         uint16_t opCode;
     public:
@@ -52,6 +51,8 @@ class Chip8 {
         void clearScreen();
         void Grant();
         const void printMem(uint16_t, uint16_t);
+        //RAM
+        uint8_t memory[MEMORY_SIZE];
 
         //screen representation
         uint8_t gfx[PXL_HEIGHT * PXL_WIDTH];

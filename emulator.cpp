@@ -96,7 +96,7 @@ int main(){
                 //myGui.Update(pixels, PXL_WIDTH * sizeof(uint32_t));
                 //platform.Update(pixels, PXL_WIDTH * sizeof(uint32_t));
             }
-            myGui.Update(pixels, PXL_WIDTH * sizeof(uint32_t));
+            myGui.Update(pixels, PXL_WIDTH * sizeof(uint32_t), myChip8.memory, MEMORY_SIZE);
             t0 = chrono::steady_clock::now();
         }
 

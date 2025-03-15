@@ -370,6 +370,7 @@ CMakeFiles/Chip8.dir/MyGui.cpp.obj: D:/Workspace/C++/repos/CHIP-8/MyGui.cpp \
   D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.h \
   D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/imconfig.h \
   D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/imgui.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/imgui_memory_editor.h \
   D:/Workspace/C++/repos/CHIP-8/MyGui.h \
   D:/Workspace/C++/repos/CHIP-8/Platform.h
 
@@ -811,6 +812,7 @@ CMakeFiles/Chip8.dir/emulator.cpp.obj: D:/Workspace/C++/repos/CHIP-8/emulator.cp
   D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/backends/imgui_impl_sdlrenderer3.h \
   D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/imconfig.h \
   D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/imgui.h \
+  D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/imgui_memory_editor.h \
   D:/Workspace/C++/repos/CHIP-8/Chip8.h \
   D:/Workspace/C++/repos/CHIP-8/MyGui.h \
   D:/Workspace/C++/repos/CHIP-8/Platform.h
@@ -2536,6 +2538,8 @@ C:/msys64/ucrt64/include/libloaderapi.h:
 C:/msys64/ucrt64/include/sec_api/string_s.h:
 
 C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/fxsrintrin.h:
+
+D:/Workspace/C++/repos/CHIP-8/thirdparty/imgui_docking/imgui_memory_editor.h:
 
 C:/msys64/ucrt64/include/stdarg.h:
 

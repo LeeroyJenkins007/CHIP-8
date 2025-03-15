@@ -48,7 +48,7 @@ bool MyGui::ProcessEvent(uint8_t* keypad){
     return quit;
 }
 
-void MyGui::Update(const void* pixels, int pitch){
+void MyGui::Update(const void* pixels, int pitch, uint8_t emuMem[], uint16_t memSize){
     //platform.Render(pixels, pitch);
     
     // Start the Dear ImGui frame
@@ -80,7 +80,8 @@ void MyGui::Update(const void* pixels, int pitch){
         ImGui::End();
     }
 
-
+    static MemoryEditor mem_edit;
+    mem_edit.DrawWindow("Memory Editor", emuMem, memSize);
 
     ImGui::Begin("Emulator");
 

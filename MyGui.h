@@ -31,7 +31,7 @@ class MyGui {
         MyGui(GraphicalInterface*);
         void destroy();
         bool ProcessEvent(uint8_t*);
-        void Update(const void*, int);
+        void Update(const void*, int, uint8_t[], uint16_t);
 };
 
 
