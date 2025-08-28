@@ -23,6 +23,8 @@ void Chip8::initialize(){
         keypad[idx] = 0;
     }
 
+    prevKeys = 0;
+
     //load font set into memory 0x50 - 0x9F
     for(uint8_t idx = 0; idx < 80; idx++){
         memory[idx+FONT_OFFSET] = fontset[idx];

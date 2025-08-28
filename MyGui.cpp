@@ -34,13 +34,13 @@ MyGui::MyGui(GraphicalInterface* graphicsData){
     
 }
 
-bool MyGui::ProcessEvent(uint8_t* keypad){
+bool MyGui::ProcessEvent(uint8_t* keypad, uint16_t& prevKeys){
     bool quit = false;
 
     SDL_Event event;
     while(SDL_PollEvent(&event)){
         ImGui_ImplSDL3_ProcessEvent(&event);
-        quit = platform.ProcessInput(keypad, event);
+        quit = platform.ProcessInput(keypad, prevKeys, event);
         if (quit)
             break;
     }

@@ -16,7 +16,7 @@ class Platform {
         Platform(const char*, int, int, int, int);
         void Render(const void*, int);
         void destroy();
-        bool ProcessInput(uint8_t*, SDL_Event);
+        bool ProcessInput(uint8_t*, uint16_t&, SDL_Event);
 };
 
 #endif

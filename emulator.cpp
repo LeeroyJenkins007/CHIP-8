@@ -11,11 +11,11 @@ using namespace std;
 Chip8 myChip8;
 
 //const char ROM[] = "../roms/chip8-logo.ch8";
-const char ROM[] = "../roms/2-ibm-logo.ch8";
+//const char ROM[] = "../roms/2-ibm-logo.ch8";
 //const char  ROM[] = "../roms/3-corax+.ch8";
 //const char  ROM[] = "../roms/4-flags.ch8";
 //const char  ROM[] = "../roms/5-quirks.ch8";
-//const char  ROM[] = "../roms/6-keypad.ch8";
+const char  ROM[] = "../roms/6-keypad.ch8";
 //const char  ROM[] = "../roms/7-beep.ch8";
 //const char  ROM[] = "../roms/8-scrolling.ch8";
 //const char ROM[] = "../roms/test_opcode.ch8";
@@ -64,7 +64,7 @@ int main(){
         //SDL_Event event;
         //runs through all events, doesn't get limited by frame rate
         if(ipf <= instruction_threshold){
-            quit = myGui.ProcessEvent(myChip8.keypad);
+            quit = myGui.ProcessEvent(myChip8.keypad, myChip8.prevKeys);
             //quit = platform.ProcessInput(myChip8.keypad);
 
             //ImGui_ImplSDL3_ProcessEvent(&event);

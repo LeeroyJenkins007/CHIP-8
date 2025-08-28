@@ -57,10 +57,16 @@ void Platform::Render(const void* pixels, int pitch){
             SDL_RenderPresent(renderer);
 }
 
-bool Platform::ProcessInput(uint8_t* keypad, SDL_Event event){
+bool Platform::ProcessInput(uint8_t* keypad, uint16_t& prevKeys, SDL_Event event){
     bool quit = false;
 
     //SDL_Event event;
+    //dont like this magic number
+    for(uint8_t key; key < 16; key++){
+        prevKeys = keypad[key] << key;
+    }
+
+    std::cout << "keys: " << prevKeys << std::endl;
 
     //while (SDL_PollEvent(&event)){
 

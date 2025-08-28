@@ -60,6 +60,8 @@ class Chip8 {
         bool drawFlag;
         //keypad
         uint8_t keypad[16];
+        //prev keystate
+        uint16_t prevKeys;
 };
 
 #endif /*CHIP8_H*/

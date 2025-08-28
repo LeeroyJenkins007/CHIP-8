@@ -30,7 +30,7 @@ class MyGui {
     public:
         MyGui(GraphicalInterface*);
         void destroy();
-        bool ProcessEvent(uint8_t*);
+        bool ProcessEvent(uint8_t*, uint16_t&);
         void Update(const void*, int, uint8_t[], uint16_t);
 };
 
